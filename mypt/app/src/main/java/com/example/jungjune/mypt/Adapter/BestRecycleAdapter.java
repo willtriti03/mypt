@@ -6,10 +6,12 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,11 +31,21 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
     Context context;
     List<BestRecycleItem> items;
     int item_layout;
+    int width;
 
-    public BestRecycleAdapter(Context context, List<BestRecycleItem> items, int item_layout) {
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public BestRecycleAdapter(Context context, List<BestRecycleItem> items, int item_layout,int width) {
         this.context = context;
         this.items = items;
         this.item_layout = item_layout;
+        setWidth(width);
     }
 
     @Override
@@ -55,6 +67,10 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
 
             }
         });
+
+        android.view.ViewGroup.LayoutParams layoutParams = holder.image.getLayoutParams();
+        layoutParams.width=getWidth();
+        holder.image.setLayoutParams(layoutParams);
     }
     public void addItem(Drawable dw, String name, String info){
         items.add(new BestRecycleItem(dw,name,info));
