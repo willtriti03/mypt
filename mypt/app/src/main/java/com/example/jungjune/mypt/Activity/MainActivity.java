@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.example.jungjune.mypt.Adapter.BestRecycleAdapter;
 import com.example.jungjune.mypt.R;
@@ -20,8 +21,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends TitleBarActivity {
     @BindView(R.id.contentPanel)ScrollView sc;
-    @BindView(R.id.recycleView)RecyclerView recyclerView;
-
+    RecyclerView recyclerView;
     BestRecycleAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +30,12 @@ public class MainActivity extends TitleBarActivity {
         ButterKnife.bind(this);
 
         View v = LayoutInflater.from(this).inflate(R.layout.view_best, null);
-        ButterKnife.bind(this,v);
         sc.addView(v);
 
-        adapter=new BestRecycleAdapter(getApplicationContext(),null,R.layout.activity_main);
-        recyclerView.setAdapter(adapter);
-        LinearLayoutManager layoutManager=new LinearLayoutManager(getApplicationContext());
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView= (RecyclerView) v.findViewById(R.id.recycleView);
 
-        adapter.addItem(R.drawable.btn_float_ok,"이정준","ㄴㄴ");
+        adapter = new BestRecycleAdapter(getApplicationContext(),null,R.layout.activity_main);
+        recyclerView.setAdapter(adapter);
+
     }
 }

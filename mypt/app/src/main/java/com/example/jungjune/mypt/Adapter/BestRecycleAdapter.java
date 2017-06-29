@@ -46,7 +46,7 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final BestRecycleItem item = items.get(position);
-        Drawable drawable = context.getResources().getDrawable(item.getImage());
+        Drawable drawable = item.getImage();
         holder.image.setBackground(drawable);
         holder.title.setText(item.getName());
         holder.cardview.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +56,7 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
             }
         });
     }
-    public void addItem(int dw, String name, String info){
+    public void addItem(Drawable dw, String name, String info){
         items.add(new BestRecycleItem(dw,name,info));
     }
 
@@ -66,12 +66,15 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.image)ImageView image;
-        @BindView(R.id.name)TextView title;
-        @BindView(R.id.cardview)CardView cardview;
+        ImageView image;
+        TextView title;
+        CardView cardview;
         public ViewHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this, itemView);
+            cardview =(CardView)itemView.findViewById(R.id.cardview);
+            image= (ImageView)itemView.findViewById(R.id.image);
+            title = (TextView)itemView.findViewById(R.id.name);
+
 
         }
     }

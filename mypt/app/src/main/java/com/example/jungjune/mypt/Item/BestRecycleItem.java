@@ -1,22 +1,24 @@
 package com.example.jungjune.mypt.Item;
 
+import android.graphics.drawable.Drawable;
+
 /**
  * Created by jungjune on 2017-06-29.
  */
 
 public class BestRecycleItem {
-    int image;
+    Drawable image;
     String name;
     String info;
     public BestRecycleItem(){}
 
-    public BestRecycleItem(int image, String name, String info){
+    public BestRecycleItem(Drawable image, String name, String info){
         this.image = image;
         this.name = name;
         this.info = info;
     }
 
-    public void setImage(int image) {
+    public void setImage(Drawable image) {
         this.image = image;
     }
 
@@ -28,7 +30,7 @@ public class BestRecycleItem {
         this.info = info;
     }
 
-    public int getImage() {
+    public Drawable getImage() {
         return image;
     }
 
