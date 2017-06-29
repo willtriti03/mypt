@@ -2,18 +2,10 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item>
-        <layer-list>
-            <!-- shadow (밑으로) : 그림자 -->
-            <item android:bottom="3dp">
-                <shape>
-                    <solid android:color="#039be5"/>
-                    <corners android:bottomRightRadius="5dp"
-                        android:bottomLeftRadius="5dp"
-                        android:topLeftRadius="5dp"
-                        android:topRightRadius="5dp"/>
-                </shape>
-            </item>
-        </layer-list>
+        <shape>
+            <solid android:color="#039be5" />
+            <corners android:bottomLeftRadius="5dp" android:bottomRightRadius="5dp" android:topLeftRadius="5dp" android:topRightRadius="5dp" />
+        </shape>
     </item>
 </selector>
 
