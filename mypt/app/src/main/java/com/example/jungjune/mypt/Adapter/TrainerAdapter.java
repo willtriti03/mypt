@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,10 +20,10 @@ import com.example.jungjune.mypt.R;
 import java.util.List;
 
 /**
- * Created by jungjune on 2017-06-29.
+ * Created by jungjune on 2017-06-30.
  */
 
-public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.ViewHolder> {
+public class TrainerAdapter  extends RecyclerView.Adapter<TrainerAdapter.ViewHolder> {
     Context context;
     List<BestRecycleItem> items;
     int item_layout;
@@ -35,7 +37,7 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
         return width;
     }
 
-    public BestRecycleAdapter(Context context, List<BestRecycleItem> items, int item_layout,int width) {
+    public TrainerAdapter(Context context, List<BestRecycleItem> items, int item_layout,int width) {
         this.context = context;
         this.items = items;
         this.item_layout = item_layout;
@@ -43,24 +45,16 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cardview, null);
-        return new ViewHolder(v);
+    public TrainerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_trainer, null);
+        return new TrainerAdapter.ViewHolder(v);
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(TrainerAdapter.ViewHolder holder, int position) {
         final BestRecycleItem item = items.get(position);
-        Drawable drawable = item.getImage();
-        holder.image.setBackground(drawable);
-        holder.title.setText(item.getName());
-        holder.cardview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
 
         android.view.ViewGroup.LayoutParams layoutParams = holder.image.getLayoutParams();
         layoutParams.width=getWidth();
@@ -76,16 +70,26 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView image;
-        TextView title;
+        ImageView image, heart;
+        Button  bestImage;
+        TextView name, gym, money,like, star;
+        ImageButton likeBtn;
         CardView cardview;
         public ViewHolder(View itemView) {
             super(itemView);
-            cardview =(CardView)itemView.findViewById(R.id.cardview);
-            image= (ImageView)itemView.findViewById(R.id.image);
-            title = (TextView)itemView.findViewById(R.id.name);
+            image=(ImageView) itemView.findViewById(R.id.imageView);
+            heart=(ImageView) itemView.findViewById(R.id.trainerLikeHeart);
+            bestImage=(Button) itemView.findViewById(R.id.bestTag);
+            name =(TextView) itemView.findViewById(R.id.name);
+            gym=(TextView) itemView.findViewById(R.id.gym_location);
+            money=(TextView) itemView.findViewById(R.id.money);
+            like =(TextView) itemView.findViewById(R.id.trainerLike);
+            star =(TextView) itemView.findViewById(R.id.trainerStar);
+            likeBtn = (ImageButton) itemView.findViewById(R.id.like);
+            cardview = (CardView) itemView.findViewById(R.id.trainer);
 
 
         }
     }
 }
+
