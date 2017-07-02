@@ -13,6 +13,16 @@ public class TrainerItem {
     String name,location;
     Drawable dw;
 
+    public TrainerItem(Drawable dw,String name,String location,int money,int like,int  star, boolean best ){
+        this.dw=dw;
+        this.name=name;
+        this.location=location;
+        this.money=money;
+        this.like=like;
+        this.star=star;
+        this.best=best;
+
+    }
     public void setDw(Drawable dw) {
         this.dw = dw;
     }

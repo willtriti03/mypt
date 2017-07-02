@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jungjune.mypt.Item.BestRecycleItem;
+import com.example.jungjune.mypt.Item.TrainerItem;
 import com.example.jungjune.mypt.R;
 
 import java.util.List;
@@ -25,23 +26,13 @@ import java.util.List;
 
 public class TrainerAdapter  extends RecyclerView.Adapter<TrainerAdapter.ViewHolder> {
     Context context;
-    List<BestRecycleItem> items;
+    List<TrainerItem> items;
     int item_layout;
-    int width;
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public TrainerAdapter(Context context, List<BestRecycleItem> items, int item_layout,int width) {
+    public TrainerAdapter(Context context, List<TrainerItem> items, int item_layout) {
         this.context = context;
         this.items = items;
         this.item_layout = item_layout;
-        setWidth(width);
     }
 
     @Override
@@ -53,17 +44,32 @@ public class TrainerAdapter  extends RecyclerView.Adapter<TrainerAdapter.ViewHol
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(TrainerAdapter.ViewHolder holder, int position) {
-        final BestRecycleItem item = items.get(position);
+        final TrainerItem item = items.get(position);
+        Drawable drawable = item.getDw();
+        holder.image.setBackground(drawable);
+        holder.heart.setBackground(context.getDrawable(R.drawable.ic_trainer_like_normal));
+        holder.bestImage.setVisibility(View.VISIBLE);
+        holder.name.setText(item.getName());
+        holder.gym.setText(item.getLocation());
+        holder.money.setText(item.getMoney()+"원");
+        holder.like.setText(item.getLike()+"K");
+        holder.star.setText(item.getStar()+"");
+        holder.likeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
+        holder.cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         android.view.ViewGroup.LayoutParams layoutParams = holder.image.getLayoutParams();
-        layoutParams.width=getWidth();
         holder.image.setLayoutParams(layoutParams);
     }
-    public void addItem(Drawable dw, String name, String info){
-        items.add(new BestRecycleItem(dw,name,info));
-    }
-
     @Override
     public int getItemCount() {
         return this.items.size();
@@ -80,7 +86,7 @@ public class TrainerAdapter  extends RecyclerView.Adapter<TrainerAdapter.ViewHol
             image=(ImageView) itemView.findViewById(R.id.imageView);
             heart=(ImageView) itemView.findViewById(R.id.trainerLikeHeart);
             bestImage=(Button) itemView.findViewById(R.id.bestTag);
-            name =(TextView) itemView.findViewById(R.id.name);
+            name =(TextView) itemView.findViewById(R.id.profil_name);
             gym=(TextView) itemView.findViewById(R.id.gym_location);
             money=(TextView) itemView.findViewById(R.id.money);
             like =(TextView) itemView.findViewById(R.id.trainerLike);
