@@ -44,7 +44,10 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cardview, null);
+        switch (viewType) {
+            case 1:View v1 = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cardview, null);break;
+            case 2:
+        }
         return new ViewHolder(v);
     }
 
