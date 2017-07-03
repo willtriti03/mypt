@@ -51,7 +51,7 @@ public class ListFragment extends Fragment {
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
-
+        recyclerView.setNestedScrollingEnabled(false);
         List<TrainerItem> items=new ArrayList<>();
         TrainerItem[] item=new TrainerItem[6];
         item[0]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#1","asddas",10000,500,5,true);
