@@ -12,7 +12,7 @@ import com.example.jungjune.mypt.Fragment.BestTabFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends TitleBarActivity {
+public class MainActivity extends TitleBarActivity{
     @BindView(R.id.search_bar)Button search;
 
     @Override

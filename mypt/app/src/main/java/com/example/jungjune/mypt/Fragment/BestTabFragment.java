@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.jungjune.mypt.Adapter.BestRecycleAdapter;
 import com.example.jungjune.mypt.Item.BestRecycleItem;
@@ -64,7 +65,6 @@ public class BestTabFragment extends Fragment {
             public void run() {
                 time=nowDot+1;
                 recyclerView.smoothScrollToPosition(time%max);
-
             }
         };
         tm = new Timer();

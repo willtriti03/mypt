@@ -35,7 +35,7 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
         return width;
     }
 
-    public BestRecycleAdapter(Context context, List<BestRecycleItem> items, int item_layout,int width) {
+    public BestRecycleAdapter(Context context, List<BestRecycleItem> items, int item_layout, int width) {
         this.context = context;
         this.items = items;
         this.item_layout = item_layout;
@@ -44,11 +44,9 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        switch (viewType) {
-            case 1:View v1 = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cardview, null);break;
-            case 2:
-        }
-        return new ViewHolder(v);
+        View v1 = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_cardview, null);
+
+        return new ViewHolder(v1);
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -66,11 +64,12 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
         });
 
         android.view.ViewGroup.LayoutParams layoutParams = holder.image.getLayoutParams();
-        layoutParams.width=getWidth();
+        layoutParams.width = getWidth();
         holder.image.setLayoutParams(layoutParams);
     }
-    public void addItem(Drawable dw, String name, String info){
-        items.add(new BestRecycleItem(dw,name,info));
+
+    public void addItem(Drawable dw, String name, String info) {
+        items.add(new BestRecycleItem(dw, name, info));
     }
 
     @Override
@@ -82,11 +81,12 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
         ImageView image;
         TextView title;
         CardView cardview;
+
         public ViewHolder(View itemView) {
             super(itemView);
-            cardview =(CardView)itemView.findViewById(R.id.cardview);
-            image= (ImageView)itemView.findViewById(R.id.image);
-            title = (TextView)itemView.findViewById(R.id.name);
+            cardview = (CardView) itemView.findViewById(R.id.cardview);
+            image = (ImageView) itemView.findViewById(R.id.image);
+            title = (TextView) itemView.findViewById(R.id.name);
 
 
         }

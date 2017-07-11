@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:gravity="center"
+        android:drawable="@drawable/title_login_logo"
+        android:width="52.5dp"
+        android:height="15dp">
+    </item>
+</selector>

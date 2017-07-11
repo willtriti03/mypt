@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mypt</string>
+    <string name="action_search">Setting</string>
+    <string name="changeInform">회원정보 수정</string>
 </resources>
