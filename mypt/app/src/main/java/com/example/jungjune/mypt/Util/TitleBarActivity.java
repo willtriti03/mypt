@@ -1,4 +1,4 @@
-package com.example.jungjune.mypt.Activity;
+package com.example.jungjune.mypt.Util;
 
 import android.content.Intent;
 import android.graphics.Bitmap;

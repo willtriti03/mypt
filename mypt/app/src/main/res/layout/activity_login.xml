@@ -45,7 +45,8 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="0.9"
                     android:text="아이디"
-                    android:textColor="#BDBDBD" />
+                    android:textColor="#BDBDBD"
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/id_text"
@@ -54,7 +55,15 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_weight="1.1"
-                    android:backgroundTint="@color/colorAccent" />
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/gray_line" />
             </LinearLayout>
 
             <LinearLayout
@@ -70,7 +79,8 @@
                     android:layout_marginLeft="15dp"
                     android:layout_weight="0.9"
                     android:text="비밀번호"
-                    android:textColor="#BDBDBD" />
+                    android:textColor="#BDBDBD"
+                    android:textSize="18sp" />
 
                 <EditText
                     android:id="@+id/password_text"
@@ -79,7 +89,15 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_weight="1.1"
-                    android:backgroundTint="@color/colorAccent" />
+                    android:background="@android:color/transparent" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/gray_line" />
             </LinearLayout>
         </LinearLayout>
 

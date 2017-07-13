@@ -6,16 +6,14 @@ import com.example.jungjune.mypt.R;
 import com.example.jungjune.mypt.Util.TextTitleActivity;
 
 /**
- * Created by triti on 2017-07-07.
+ * Created by triti on 2017-07-13.
  */
 
-public class RegisterActivity extends TextTitleActivity {
+public class AgreementActivity extends TextTitleActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.setTitle(R.string.register);
-        setContentView(R.layout.activity_register);
+        super.setTitle(R.string.agreement);
+        setContentView(R.layout.activity_agreement);
     }
-
-
 }

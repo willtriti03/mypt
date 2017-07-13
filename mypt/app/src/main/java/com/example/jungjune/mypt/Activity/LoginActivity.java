@@ -1,8 +1,12 @@
 package com.example.jungjune.mypt.Activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -25,12 +29,13 @@ public class LoginActivity extends Activity{
 
     @OnClick(R.id.loginBtn)
     public void login(){
-
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        finish();
     }
 
     @OnClick(R.id.register)
     public void register(){
-
+        startActivity(new Intent(LoginActivity.this, AgreementActivity.class));
     }
 
     @OnClick(R.id.findID)
