@@ -16,11 +16,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <ImageView
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/dasd"
                 android:scaleType="centerInside"
                 android:id="@+id/image"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_rantangle_black_alpha_30" />
             <Button
                 android:id="@+id/profil"
                 android:layout_width="80dp"
@@ -28,6 +32,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="15dp"
                 android:layout_gravity="right|bottom"
+                android:textColor="#ffffff"
                 android:text="프로필"
                 android:background="@drawable/best_profil_btn" />
             <LinearLayout
@@ -36,10 +41,12 @@
                 android:orientation="vertical"
                 android:layout_gravity="bottom|left">
                 <TextView
+                    android:id="@+id/doname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:textSize="18sp"
+                    android:textColor="#ffffff"
                     android:text="이번달\n베스트 트레이너"/>
                 <TextView
                     android:id="@+id/name"
@@ -48,6 +55,7 @@
                     android:padding="10dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
+                    android:textColor="#ffffff"
                     android:text="ddd"
                     android:layout_marginTop="-20dp"/>
             </LinearLayout>

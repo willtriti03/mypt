@@ -26,11 +26,11 @@ public class RegisterMainActivity extends TextTitleActivity {
 
     @OnClick(R.id.registerPT)
     public void  setRegisterPt(){
-        startActivity(new Intent(RegisterMainActivity.this,RegisterActivity.class).setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
+        startActivity(new Intent(RegisterMainActivity.this,AgreementActivity.class).putExtra("to","register"));
     }
     @OnClick(R.id.registerTrainer)
     public void setRegisterTrainer(){
-        startActivity(new Intent(RegisterMainActivity.this,RegisterTrainerActivity.class).setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
+        startActivity(new Intent(RegisterMainActivity.this,AgreementActivity.class).putExtra("to","trainer"));
     }
     @OnClick(R.id.fbBtn_User)
     public void  setFbBtn_User(){

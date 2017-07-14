@@ -35,7 +35,7 @@ public class LoginActivity extends Activity{
 
     @OnClick(R.id.register)
     public void register(){
-        startActivity(new Intent(LoginActivity.this, AgreementActivity.class));
+        startActivity(new Intent(LoginActivity.this, RegisterMainActivity.class));
     }
 
     @OnClick(R.id.findID)

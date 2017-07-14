@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="0dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#039be5" />
+        <TextView
+            android:id="@+id/myPageId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="willtriti03"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/myPageRegisteDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016.03.21 가입"
+            android:textSize="12sp"
+            android:textColor="#BDBDBD" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/gray_line" />
+    <ListView
+        android:id="@+id/myPageList"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"
+        android:divider="#E0E0E0">
+        </ListView>
+</LinearLayout>

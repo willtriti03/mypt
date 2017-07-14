@@ -59,6 +59,7 @@ public class BestTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         context= getActivity();
         v = inflater.inflate(R.layout.fragment_best, container, false);
+        layoutManager = new LinearLayoutManager(context.getApplicationContext());
         setRecyclerView();
         tk = new TimerTask() {
             @Override
@@ -78,16 +79,35 @@ public class BestTabFragment extends Fragment {
         return v;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        ab.clear();
+        createDots();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        tm.cancel();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        tm.cancel();
+    }
 
     public void setMax(final int max) {
         this.max = max;
-        createDots();
 
     }
     public void changTo(int change){
         ab.get(nowDot).setBackground(context.getDrawable(R.drawable.dot_gray));
         ab.get(change).setBackground(context.getDrawable(R.drawable.dot_blue));
         nowDot=change;
+
+
     }
     public void createDots(){
         LinearLayout dotLayout=(LinearLayout)v.findViewById(R.id.dotLayout);
@@ -105,8 +125,7 @@ public class BestTabFragment extends Fragment {
             ab.add(dots);
             dotLayout.addView(dots);
         }
-        ab.get(0).setBackground(context.getDrawable(R.drawable.dot_blue));
-        nowDot=0;
+        ab.get(nowDot).setBackground(context.getDrawable(R.drawable.dot_blue));
     }
     private void setRecyclerView(){
         recyclerView= (RecyclerView) v.findViewById(R.id.recycleView);
@@ -115,7 +134,7 @@ public class BestTabFragment extends Fragment {
         SnapHelper snapHelper = new LinearSnapHelper();
         snapHelper.attachToRecyclerView(recyclerView);
         snapHelper.onFling(1,0);
-        layoutManager = new LinearLayoutManager(context.getApplicationContext());
+
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
 
         recyclerView.setHasFixedSize(true);
@@ -149,6 +168,10 @@ public class BestTabFragment extends Fragment {
                 super.onScrolled(recyclerView, dx, dy);
             }
         });
+    }
+    public void setNowDot(){
+        nowDot=layoutManager.findFirstVisibleItemPosition();
+        ab.get(nowDot).setBackground(context.getDrawable(R.drawable.dot_blue));
     }
     public int dpToPx(int dp) {
         DisplayMetrics displayMetrics = this.getResources().getDisplayMetrics();
