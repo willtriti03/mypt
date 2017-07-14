@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.example.jungjune.mypt.Fragment.MyPageTrainerFragment;
 import com.example.jungjune.mypt.Fragment.MyPageUserFragment;
+import com.example.jungjune.mypt.Fragment.TrainerMatchingFragment;
 import com.example.jungjune.mypt.R;
 import com.example.jungjune.mypt.Fragment.BestTabFragment;
 import com.example.jungjune.mypt.Util.TitleBarActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends TitleBarActivity {
     FragmentTransaction fragmentTransaction;
     MyPageUserFragment myPageTab;
     BestTabFragment bestTab;
+    TrainerMatchingFragment trainerMatchingFragment;
 
     Button nowBtn;
     @BindView(R.id.search_bar)Button search;
@@ -44,7 +46,13 @@ public class MainActivity extends TitleBarActivity {
         fragmentTransaction.commit();
         changeTab(mypage);
     }
-
+    @OnClick(R.id.trainerBtn)
+    public void setTrainer(){
+        fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.contentPanel,trainerMatchingFragment);
+        fragmentTransaction.commit();
+        changeTab(trainer);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +62,7 @@ public class MainActivity extends TitleBarActivity {
 
         bestTab= new BestTabFragment();
         myPageTab= new MyPageUserFragment();
-
+        trainerMatchingFragment = new TrainerMatchingFragment();
 
         fm = getFragmentManager();
         fragmentTransaction = fm.beginTransaction();
