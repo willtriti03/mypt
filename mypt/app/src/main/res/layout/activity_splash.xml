@@ -5,8 +5,8 @@
     android:gravity="center"
     android:background="#039be5">
     <ImageView
-        android:layout_width="210dp"
-        android:layout_height="55dp"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
         android:background="@drawable/title_login_logo"/>
 
 </LinearLayout>

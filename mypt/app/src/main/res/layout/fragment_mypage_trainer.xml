@@ -12,32 +12,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <FrameLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="left">
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                card_view:cardCornerRadius="5dp"
-                >
+                card_view:cardCornerRadius="5dp">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/pro"/>
+                    android:background="@drawable/pro" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="bottom"
-                    android:orientation="horizontal"
+                    android:background="@drawable/round_rantangle_black_alpha"
                     android:gravity="center"
-                    android:background="@drawable/round_rantangle_black_alpha">
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="사진 변경"
                         android:textColor="#ffffff"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
         </FrameLayout>
@@ -47,17 +51,20 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="트레이너"
-                android:textStyle="bold"
+                android:textColor="#039be5"
                 android:textSize="11sp"
-                android:textColor="#039be5"/>
+                android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/myPageName"
                     android:layout_width="wrap_content"
@@ -65,8 +72,8 @@
                     android:text="김덕배"
                     android:textColor="#757575"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/myPageGym"
                     android:layout_width="wrap_content"
@@ -74,35 +81,38 @@
                     android:layout_marginLeft="5dp"
                     android:text="어디어디어디"
                     android:textColor="#BDBDBD"
-                    android:textStyle="bold"
-                    android:textSize="11sp"/>
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="5dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="11dp"
-                    android:background="@drawable/ic_trainer_like_normal"/>
+                    android:background="@drawable/ic_trainer_like_normal" />
+
                 <TextView
                     android:id="@+id/myPageLike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:text="500K"
+                    android:textColor="#EF5350"
                     android:textSize="11sp"
-                    android:textStyle="bold"
-                    android:textColor="#EF5350"/>
+                    android:textStyle="bold" />
+
                 <ImageView
                     android:layout_width="14dp"
                     android:layout_height="11dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="8dp"
-                    android:background="@drawable/ic_trainer_star"/>
+                    android:background="@drawable/ic_trainer_star" />
 
                 <TextView
                     android:id="@+id/myPageStar"
@@ -110,98 +120,111 @@
                     android:layout_height="wrap_content"
                     android:text="5"
                     android:textColor="#FFCA28"
-                    android:textStyle="bold"
-                    android:textSize="11sp" />
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:weightSum="2">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="방문자 수 : "
                         android:textColor="#757575"
-                        android:textStyle="bold"
-                        android:textSize="11sp"/>
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/myPageVisitedMan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1100"
                         android:textColor="#757575"
-                        android:textStyle="bold"
-                        android:textSize="11sp"/>
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="아이디 : "
                         android:textColor="#757575"
-                        android:textStyle="bold"
-                        android:textSize="11sp"/>
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/myPageId"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="asdf1134"
                         android:textColor="#757575"
-                        android:textStyle="bold"
-                        android:textSize="11sp"/>
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:weightSum="2">
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="평균 1회 가격 : "
                         android:textColor="#757575"
-                        android:textStyle="bold"
-                        android:textSize="11sp"/>
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/myPageMoney"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="30000원"
                         android:textColor="#757575"
-                        android:textStyle="bold"
-                        android:textSize="11sp"/>
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginLeft="5dp"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/myPageRegisteDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2016.03.21"
                         android:textColor="#757575"
-                        android:textStyle="bold"
-                        android:textSize="11sp"/>
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView"
@@ -215,6 +238,7 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="1dp"

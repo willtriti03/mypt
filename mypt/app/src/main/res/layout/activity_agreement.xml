@@ -106,7 +106,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/gray_line" />
@@ -158,7 +158,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/gray_line" />
@@ -208,7 +208,7 @@
         </LinearLayout>
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/gray_line" />
@@ -258,7 +258,7 @@
         </LinearLayout>
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1dp"
             android:layout_marginBottom="2dp"
             android:layout_marginTop="2dp"
             android:background="@drawable/gray_line" />

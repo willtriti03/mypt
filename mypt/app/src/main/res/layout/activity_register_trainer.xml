@@ -39,7 +39,7 @@
                     android:hint="아이디"
                     android:inputType="text"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/sameCheck"
@@ -54,7 +54,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/gray_line" />
 
@@ -72,12 +72,12 @@
                     android:hint="비밀번호"
                     android:inputType="textPassword"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/gray_line" />
 
@@ -95,12 +95,12 @@
                     android:hint="비밀번호 확인"
                     android:inputType="textPassword"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/gray_line" />
 
@@ -118,12 +118,12 @@
                     android:hint="이름"
                     android:inputType="text"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/gray_line" />
 
@@ -141,12 +141,12 @@
                     android:hint="생년월일"
                     android:inputType="date"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/gray_line" />
 
@@ -197,7 +197,7 @@
                     android:hint="신장"
                     android:inputType="number"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:layout_width="2dp"
@@ -215,12 +215,12 @@
                     android:hint="몸무게"
                     android:inputType="number"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/gray_line" />
 
@@ -238,11 +238,11 @@
                     android:hint="사업자 등록번호 또는 자격증"
                     android:inputType="number"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/gray_line" />
 
@@ -269,7 +269,7 @@
                         android:inputType="number"
                         android:hint="헬스장 주소"
                         android:textColor="#777777"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
 
                     <Button
                         android:id="@+id/addressFind"
@@ -291,7 +291,7 @@
                     android:hint="추가 주소"
                     android:inputType="text"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <CheckBox
                     android:id="@+id/emailCheck"
@@ -309,7 +309,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/gray_line" />
 
@@ -330,12 +330,12 @@
                     android:background="@android:color/transparent"
                     android:hint="E-mail"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/gray_line" />
 
@@ -358,7 +358,7 @@
                     android:hint="전화번호"
                     android:inputType="phone"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/reSMScheck"
@@ -373,7 +373,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/gray_line" />
 
@@ -396,7 +396,7 @@
                     android:inputType="number"
                     android:maxLength="6"
                     android:textColor="#777777"
-                    android:textSize="18sp" />
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/reCodecheck"
@@ -411,7 +411,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="12dp"
                 android:background="@drawable/gray_line"/>
             <Button
@@ -422,7 +422,7 @@
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/round_ractangle_skyblue"
                 android:text="다음"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="#ffffff"/>
         </LinearLayout>
     </ScrollView>
