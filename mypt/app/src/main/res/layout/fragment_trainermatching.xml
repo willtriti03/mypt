@@ -1,61 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:paddingTop="0dp">
+
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fadingEdge="none"
         android:overScrollMode="never"
         android:scrollbars="none">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="40dp"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="카테고리"
+                android:textColor="#757575"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#757575"/>
+                android:textStyle="bold" />
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginBottom="12dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/gray_line" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:weightSum="3">
+
                 <LinearLayout
                     android:id="@+id/bodybuilding"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginRight="3dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
                     android:background="@drawable/round_rantangle_white"
                     android:gravity="center"
-                    android:layout_marginRight="3dp">
+                    android:orientation="vertical">
+
                     <ImageView
                         android:id="@+id/bodybuildingImage"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:background="@drawable/ic_btn_setsearch_filter_bodybuilding_off"/>
+                        android:background="@drawable/ic_btn_setsearch_filter_bodybuilding_off" />
+
                     <TextView
                         android:id="@+id/bodybuildingText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:text="보디빌딩"
-                        android:textSize="14sp"
-                        android:textColor="#BDBDBD" />
+                        android:textColor="#BDBDBD"
+                        android:textSize="14sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -89,11 +98,12 @@
                     android:id="@+id/fitness"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
                     android:layout_weight="1"
-                    android:orientation="vertical"
                     android:background="@drawable/round_rantangle_white"
                     android:gravity="center"
-                    android:layout_marginLeft="3dp">
+                    android:orientation="vertical">
+
                     <ImageView
                         android:id="@+id/fitnessImage"
                         android:layout_width="35dp"
@@ -111,37 +121,42 @@
                 </LinearLayout>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="위치"
+                    android:textColor="#757575"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#757575" />
+                    android:textStyle="bold" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
                     android:layout_marginBottom="12dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/gray_line" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="3">
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="35dp"
-                        android:background="@drawable/round_rantangle_white"
-                        android:orientation="horizontal"
                         android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_rantangle_white"
                         android:gravity="center|right"
-                        android:layout_weight="1">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/cityText"
@@ -162,23 +177,25 @@
 
                         </Spinner>
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="35dp"
-                        android:background="@drawable/round_rantangle_white"
-                        android:orientation="horizontal"
                         android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_rantangle_white"
                         android:gravity="center|right"
-                        android:layout_weight="1">
+                        android:orientation="horizontal">
+
                         <TextView
                             android:id="@+id/townText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
                             android:text="구"
-                            android:textSize="14sp"
                             android:textColor="#757575"
-                            android:textStyle="bold"
-                            android:layout_marginRight="10dp"/>
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                         <Spinner
                             android:id="@+id/town"
@@ -189,23 +206,25 @@
 
                         </Spinner>
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="35dp"
-                        android:background="@drawable/round_rantangle_white"
-                        android:orientation="horizontal"
                         android:layout_marginRight="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_rantangle_white"
                         android:gravity="center|right"
-                        android:layout_weight="1">
+                        android:orientation="horizontal">
+
                         <TextView
                             android:id="@+id/dongText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
                             android:text="동"
-                            android:textSize="14sp"
                             android:textColor="#757575"
-                            android:textStyle="bold"
-                            android:layout_marginRight="10dp"/>
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                         <Spinner
                             android:id="@+id/dong"
@@ -219,100 +238,159 @@
 
                 </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="원하는 1회 금액"
+                    android:textColor="#757575"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#757575" />
+                    android:textStyle="bold" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
                     android:layout_marginBottom="12dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/gray_line" />
+
                 <EditText
                     android:id="@+id/money"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:paddingLeft="15dp"
+                    android:background="@drawable/round_rantangle_white"
                     android:hint="금액"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
                     android:textColor="#757575"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:inputType="number"
-                    android:background="@drawable/round_rantangle_white"/>
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="원하는 회수"
+                    android:textColor="#757575"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#757575" />
+                    android:textStyle="bold" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
                     android:layout_marginBottom="12dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/gray_line" />
+
                 <EditText
                     android:id="@+id/time"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:paddingLeft="15dp"
+                    android:background="@drawable/round_rantangle_white"
                     android:hint="회수"
+                    android:inputType="number"
+                    android:paddingLeft="15dp"
                     android:textColor="#757575"
                     android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:inputType="number"
-                    android:background="@drawable/round_rantangle_white"/>
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="상세설명"
+                    android:textColor="#757575"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#757575" />
+                    android:textStyle="bold" />
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="15dp"
                     android:layout_marginBottom="12dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/gray_line" />
-                <EditText
-                    android:id="@+id/introduce"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="240dp"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingTop="15dp"
-                    android:gravity="top"
-                    android:hint="상세설명"
-                    android:textColor="#757575"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:inputType="textMultiLine"
-                    android:scrollbars="vertical"
-                    android:background="@drawable/round_rantangle_white"/>
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_rantangle_white"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <EditText
+                        android:id="@+id/introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="top"
+                        android:hint="상세설명"
+                        android:inputType="textMultiLine"
+                        android:maxLength="1000"
+                        android:maxLines="8"
+                        android:scrollbars="vertical"
+                        android:textColor="#757575"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <ImageView
+                            android:id="@+id/imageSlide"
+                            android:layout_width="0dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="8">
+
+                        </ImageView>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:gravity="bottom|right">
+                            <Button
+                                android:id="@+id/addImage"
+                                android:layout_width="33dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@drawable/btn_writezone_addphoto" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
             </LinearLayout>
+
+            <Button
+                android:id="@+id/commit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/round_ractangle_skyblue"
+                android:text="이 내용으로 매칭하기"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
