@@ -51,13 +51,13 @@ public class TrainerMatchingFragment extends Fragment {
         context=getActivity();
         v = inflater.inflate(R.layout.fragment_trainermatching, container, false);
         adabter= new ImageSlideAdabter();
-        imageView = (ImageView)v.findViewById(R.id.imageSlide) ;
         recyclerView =(RecyclerView)v.findViewById(R.id.imageSlide);
         Button addImage = (Button)v.findViewById(R.id.addImage);
         addImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.EXTRA_ALLOW_MULTIPLE);
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
                 intent.setData(android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 intent.setType("image/*");
                 startActivityForResult(Intent.createChooser(intent, "Select Picture"), GALLERYCODE);
@@ -75,14 +75,16 @@ public class TrainerMatchingFragment extends Fragment {
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 default:
+                    /*
                     ClipData clipData = data.getClipData();
                     for (int i = 0; i < clipData.getItemCount(); i++)
                     {
                         Uri imgUri = clipData.getItemAt(i).getUri();
                         String imagePath = getRealPathFromURI(imgUri);
                         adabter.addItem(imagePath);
+                        adabter.notifyDataSetChanged();
                     }
-
+*/
                     break;
             }
 

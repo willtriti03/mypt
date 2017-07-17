@@ -64,9 +64,7 @@ public class ImageSlideAdabter extends RecyclerView.Adapter<ImageSlideAdabter.Vi
         ImageView image;
         public ViewHolder(View itemView) {
             super(itemView);
-            image = (ImageView) itemView.findViewById(R.id.imageView);
-
-
+            image = (ImageView)itemView.findViewById(R.id.imageView);
         }
     }
     public void addItem(String path) {
