@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.jungjune.mypt.Adapter.ImageSlideAdabter;
+import com.example.jungjune.mypt.Item.ImageSlideItem;
 import com.example.jungjune.mypt.Item.MyPageItem;
 import com.example.jungjune.mypt.R;
 
@@ -42,7 +43,6 @@ public class TrainerMatchingFragment extends Fragment {
     int GALLERYCODE = 444;
     View v;
     Context context;
-    ImageView imageView;
     RecyclerView recyclerView;
     ImageSlideAdabter adabter;
     @Nullable
@@ -50,19 +50,24 @@ public class TrainerMatchingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         context=getActivity();
         v = inflater.inflate(R.layout.fragment_trainermatching, container, false);
-        adabter= new ImageSlideAdabter();
+        adabter= new ImageSlideAdabter(context);
         recyclerView =(RecyclerView)v.findViewById(R.id.imageSlide);
         Button addImage = (Button)v.findViewById(R.id.addImage);
         addImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-                intent.setData(android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                Intent intent = new Intent();
                 intent.setType("image/*");
-                startActivityForResult(Intent.createChooser(intent, "Select Picture"), GALLERYCODE);
+                intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Picture"), GALLERYCODE);
             }
         });
+        ArrayList<ImageSlideItem> arr = new ArrayList<ImageSlideItem>();
+        ImageSlideItem item = new ImageSlideItem();
+
+        adabter = new ImageSlideAdabter(context,arr);
+        recyclerView.setAdapter(adabter);
 
         recyclerView.setAdapter(adabter);
         return v;
@@ -84,8 +89,14 @@ public class TrainerMatchingFragment extends Fragment {
                         adabter.addItem(imagePath);
                         adabter.notifyDataSetChanged();
                     }
-*/
-                    break;
+*/                  ArrayList<ImageSlideItem> arr = new ArrayList<ImageSlideItem>();
+                    ImageSlideItem item = new ImageSlideItem();
+                    Uri imgUri = data.getData();
+                    String imagePath = getRealPathFromURI(imgUri);
+                    item.setPath(imagePath);
+                    arr.add(item);
+                    adabter = new ImageSlideAdabter(context,arr);
+                    recyclerView.setAdapter(adabter);
             }
 
         }

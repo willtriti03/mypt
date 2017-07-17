@@ -7,8 +7,12 @@ import android.graphics.drawable.Drawable;
  */
 
 public class ImageSlideItem {
-    Drawable image;
+    int image;
     String path;
+
+    public  ImageSlideItem(int im){
+        image=im;
+    }
 
     public void setPath(String path) {
         this.path = path;
@@ -18,11 +22,11 @@ public class ImageSlideItem {
         return path;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
-    public Drawable getImage() {
+    public int getImage() {
         return image;
     }
 }

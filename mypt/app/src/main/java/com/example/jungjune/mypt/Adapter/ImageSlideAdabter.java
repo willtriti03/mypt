@@ -11,12 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.jungjune.mypt.Item.ImageSlideItem;
 import com.example.jungjune.mypt.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jungjune on 2017-07-17.
@@ -24,7 +26,7 @@ import java.util.ArrayList;
 
 public class ImageSlideAdabter extends RecyclerView.Adapter<ImageSlideAdabter.ViewHolder>{
     Context context;
-    ArrayList<ImageSlideItem> listViewItemList;
+    ArrayList<ImageSlideItem> listViewItemList= new ArrayList<ImageSlideItem>();
     View v1;
 
     int item_layout;
@@ -37,6 +39,13 @@ public class ImageSlideAdabter extends RecyclerView.Adapter<ImageSlideAdabter.Vi
     public int getWidth() {
         return width;
     }
+    public ImageSlideAdabter(Context ct){
+        context=ct;
+    }
+    public ImageSlideAdabter(Context ct, ArrayList<ImageSlideItem> arr){
+        context=ct;
+        listViewItemList=arr;
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -48,7 +57,7 @@ public class ImageSlideAdabter extends RecyclerView.Adapter<ImageSlideAdabter.Vi
     @Override
     public void onBindViewHolder(ImageSlideAdabter.ViewHolder holder, int position) {
         final ImageSlideItem item = listViewItemList.get(position);
-        Glide.with(v1).load(item.getPath()).into(holder.image);
+        Glide.with(v1).load(item.getImage()).into(holder.image);
 
         android.view.ViewGroup.LayoutParams layoutParams = holder.image.getLayoutParams();
         layoutParams.width = getWidth();
@@ -69,7 +78,7 @@ public class ImageSlideAdabter extends RecyclerView.Adapter<ImageSlideAdabter.Vi
     }
     public void addItem(String path) {
         ImageSlideItem item = new ImageSlideItem();
-        item.setPath(path);
+        //item.setPath(path);
         listViewItemList.add(item);
     }
 }
