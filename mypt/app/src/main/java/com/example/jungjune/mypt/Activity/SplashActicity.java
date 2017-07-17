@@ -34,7 +34,7 @@ public class SplashActicity extends Activity {
         int storagePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
 
-        if (internetPermissionCheck == PackageManager.PERMISSION_DENIED || storagePermissionCheck == PackageManager.PERMISSION_DENIED) {
+
             if (internetPermissionCheck == PackageManager.PERMISSION_DENIED) {
                 ActivityCompat.requestPermissions(this,
                         new String[]{Manifest.permission.INTERNET},
@@ -45,7 +45,7 @@ public class SplashActicity extends Activity {
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                         MY_PERMISSIONS_REQUEST_READ_CONTACTS);
             }
-        } else {
+            if (internetPermissionCheck != PackageManager.PERMISSION_DENIED && storagePermissionCheck != PackageManager.PERMISSION_DENIED) {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {

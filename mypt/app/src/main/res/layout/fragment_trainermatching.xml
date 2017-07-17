@@ -355,13 +355,13 @@
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal"
                         android:weightSum="10">
-                        <ImageView
+                        <android.support.v7.widget.RecyclerView
                             android:id="@+id/imageSlide"
                             android:layout_width="0dp"
                             android:layout_height="60dp"
                             android:layout_weight="8">
 
-                        </ImageView>
+                        </android.support.v7.widget.RecyclerView>
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
