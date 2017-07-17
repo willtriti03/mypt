@@ -1,9 +1,10 @@
 package com.example.jungjune.mypt.Activity;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,14 +15,18 @@ import com.example.jungjune.mypt.R;
 import com.example.jungjune.mypt.Fragment.BestTabFragment;
 import com.example.jungjune.mypt.Util.TitleBarActivity;
 
+import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import gun0912.tedbottompicker.TedBottomPicker;
 
 public class MainActivity extends TitleBarActivity {
     FragmentManager fm;
     FragmentTransaction fragmentTransaction;
     MyPageUserFragment myPageTab;
+    MyPageTrainerFragment myPageTabTrainer;
     BestTabFragment bestTab;
     TrainerMatchingFragment trainerMatchingFragment;
 
@@ -42,7 +47,7 @@ public class MainActivity extends TitleBarActivity {
     @OnClick(R.id.mypageBtn)
     public  void setMypage(){
         fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,myPageTab);
+        fragmentTransaction.replace(R.id.contentPanel,myPageTabTrainer);
         fragmentTransaction.commit();
         changeTab(mypage);
     }
@@ -62,13 +67,16 @@ public class MainActivity extends TitleBarActivity {
 
         bestTab= new BestTabFragment();
         myPageTab= new MyPageUserFragment();
+        myPageTabTrainer = new MyPageTrainerFragment();
         trainerMatchingFragment = new TrainerMatchingFragment();
 
-        fm = getFragmentManager();
+
+        fm = getSupportFragmentManager();
         fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(R.id.contentPanel,bestTab);
         fragmentTransaction.commit();
         nowBtn= best;
+
     }
     public void changeTab(Button toBtn){
         nowBtn.setBackground(getDrawable(R.drawable.round_rantangle_white));

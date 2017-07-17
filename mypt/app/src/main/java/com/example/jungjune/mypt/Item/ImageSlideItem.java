@@ -9,7 +9,7 @@ import android.graphics.drawable.Drawable;
 public class ImageSlideItem {
     int image;
     String path;
-
+    public  ImageSlideItem(){};
     public  ImageSlideItem(int im){
         image=im;
     }

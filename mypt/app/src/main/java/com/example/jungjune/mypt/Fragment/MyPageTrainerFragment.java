@@ -3,7 +3,7 @@ package com.example.jungjune.mypt.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * Created by jungjune on 2017-07-14.
  */
 
-public class MyPageTrainerFragment extends Fragment{
+public class MyPageTrainerFragment extends Fragment {
     View v;
     Context context;
     private ArrayList<MyPageItem> listViewItemList = new ArrayList<MyPageItem>();

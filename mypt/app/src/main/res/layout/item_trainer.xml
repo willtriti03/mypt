@@ -13,6 +13,7 @@
         android:layout_height="200dp"
         android:layout_margin="5dp"
         app:cardCornerRadius="10dp"
+        android:fadingEdge = "none"
         card_view:cardBackgroundColor="@android:color/transparent"
         card_view:cardElevation="0dp">
 
