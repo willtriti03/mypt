@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.jungjune.mypt.Fragment.CustomSearchFragment;
 import com.example.jungjune.mypt.Fragment.MyPageTrainerFragment;
 import com.example.jungjune.mypt.Fragment.MyPageUserFragment;
 import com.example.jungjune.mypt.Fragment.TrainerMatchingFragment;
@@ -20,13 +21,14 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import gun0912.tedbottompicker.TedBottomPicker;
+
 
 public class MainActivity extends TitleBarActivity {
     FragmentManager fm;
     FragmentTransaction fragmentTransaction;
     MyPageUserFragment myPageTab;
     MyPageTrainerFragment myPageTabTrainer;
+    CustomSearchFragment customSearchFragment;
     BestTabFragment bestTab;
     TrainerMatchingFragment trainerMatchingFragment;
 
@@ -43,6 +45,13 @@ public class MainActivity extends TitleBarActivity {
         fragmentTransaction.replace(R.id.contentPanel,bestTab);
         fragmentTransaction.commit();
         changeTab(best);
+    }
+    @OnClick(R.id.majchumBtn)
+    public void setMajchum(){
+        fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.contentPanel,customSearchFragment);
+        fragmentTransaction.commit();
+        changeTab(majchum);
     }
     @OnClick(R.id.mypageBtn)
     public  void setMypage(){
@@ -69,7 +78,7 @@ public class MainActivity extends TitleBarActivity {
         myPageTab= new MyPageUserFragment();
         myPageTabTrainer = new MyPageTrainerFragment();
         trainerMatchingFragment = new TrainerMatchingFragment();
-
+        customSearchFragment = new CustomSearchFragment();
 
         fm = getSupportFragmentManager();
         fragmentTransaction = fm.beginTransaction();
@@ -77,6 +86,11 @@ public class MainActivity extends TitleBarActivity {
         fragmentTransaction.commit();
         nowBtn= best;
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
     public void changeTab(Button toBtn){
         nowBtn.setBackground(getDrawable(R.drawable.round_rantangle_white));

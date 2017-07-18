@@ -3,9 +3,11 @@ package com.example.jungjune.mypt.Adapter;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -57,8 +59,8 @@ public class ImageSlideAdabter extends RecyclerView.Adapter<ImageSlideAdabter.Vi
     @Override
     public void onBindViewHolder(ImageSlideAdabter.ViewHolder holder, int position) {
         final ImageSlideItem item = listViewItemList.get(position);
-        Glide.with(v1).load(item.getImage()).into(holder.image);
-
+        Log.e("Adding","bing");
+        Glide.with(context).load(item.getPath()).into(holder.image);
         android.view.ViewGroup.LayoutParams layoutParams = holder.image.getLayoutParams();
         layoutParams.width = getWidth();
         holder.image.setLayoutParams(layoutParams);
@@ -78,7 +80,8 @@ public class ImageSlideAdabter extends RecyclerView.Adapter<ImageSlideAdabter.Vi
     }
     public void addItem(String path) {
         ImageSlideItem item = new ImageSlideItem();
-        //item.setPath(path);
+        Log.e("추가됨!","++++"+path+"  "+getItemCount());
+        item.setPath(path);
         listViewItemList.add(item);
     }
 }
