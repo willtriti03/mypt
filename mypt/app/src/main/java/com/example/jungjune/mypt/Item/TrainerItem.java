@@ -1,6 +1,5 @@
 package com.example.jungjune.mypt.Item;
 
-import android.graphics.drawable.Drawable;
 
 /**
  * Created by jungjune on 2017-06-30.
@@ -11,9 +10,9 @@ public class TrainerItem {
     boolean best;
 
     String name,location;
-    Drawable dw;
+    int dw;
 
-    public TrainerItem(Drawable dw,String name,String location,int money,int like,int  star, boolean best ){
+    public TrainerItem(int dw,String name,String location,int money,int like,int  star, boolean best ){
         this.dw=dw;
         this.name=name;
         this.location=location;
@@ -23,7 +22,7 @@ public class TrainerItem {
         this.best=best;
 
     }
-    public void setDw(Drawable dw) {
+    public void setDw(int dw) {
         this.dw = dw;
     }
 
@@ -51,7 +50,7 @@ public class TrainerItem {
         this.best = best;
     }
 
-    public Drawable getDw() {
+    public int getDw() {
         return dw;
     }
 

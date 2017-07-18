@@ -57,16 +57,16 @@ public class ListFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         List<TrainerItem> items=new ArrayList<>();
         TrainerItem[] item=new TrainerItem[10];
-        item[0]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#1","asddas",10000,500,5,true);
-        item[1]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#2","asddas",10000,500,5,true);
-        item[2]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#3","asddas",10000,500,5,true);
-        item[3]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#4","asddas",10000,500,5,true);
-        item[4]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#5","asddas",10000,500,5,true);
-        item[5]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#6","asddas",10000,500,5,true);
-        item[6]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#7","asddas",10000,500,5,true);
-        item[7]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#8","asddas",10000,500,5,true);
-        item[8]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#9","asddas",10000,500,5,true);
-        item[9]=new TrainerItem(context.getDrawable(R.drawable.dadasdas),"#10","asddas",10000,500,5,true);
+        item[0]=new TrainerItem(R.drawable.dadasdas,"#1","asddas",10000,500,5,true);
+        item[1]=new TrainerItem(R.drawable.dadasdas,"#2","asddas",10000,500,5,true);
+        item[2]=new TrainerItem(R.drawable.dadasdas,"#3","asddas",10000,500,5,true);
+        item[3]=new TrainerItem(R.drawable.dadasdas,"#4","asddas",10000,500,5,true);
+        item[4]=new TrainerItem(R.drawable.dadasdas,"#5","asddas",10000,500,5,true);
+        item[5]=new TrainerItem(R.drawable.dadasdas,"#6","asddas",10000,500,5,true);
+        item[6]=new TrainerItem(R.drawable.dadasdas,"#7","asddas",10000,500,5,true);
+        item[7]=new TrainerItem(R.drawable.dadasdas,"#8","asddas",10000,500,5,true);
+        item[8]=new TrainerItem(R.drawable.dadasdas,"#9","asddas",10000,500,5,true);
+        item[9]=new TrainerItem(R.drawable.dadasdas,"#10","asddas",10000,500,5,true);
 
         for(int i=0;i<10;i++) items.add(item[i]);
         adapter = new TrainerAdapter(context.getApplicationContext(),items,R.layout.fragment_best);

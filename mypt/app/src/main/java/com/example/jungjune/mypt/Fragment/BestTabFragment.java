@@ -143,11 +143,11 @@ public class BestTabFragment extends Fragment {
 
         List<BestRecycleItem> items=new ArrayList<>();
         BestRecycleItem[] item=new BestRecycleItem[5];
-        item[0]=new BestRecycleItem(context.getDrawable(R.drawable.dasd),"#1","asddas");
-        item[1]=new BestRecycleItem(context.getDrawable(R.drawable.dasd),"#2","asddas");
-        item[2]=new BestRecycleItem(context.getDrawable(R.drawable.dasd),"#3","asddas");
-        item[3]=new BestRecycleItem(context.getDrawable(R.drawable.dasd),"#4","asddas");
-        item[4]=new BestRecycleItem(context.getDrawable(R.drawable.dasd),"#5","asddas");
+        item[0]=new BestRecycleItem(R.drawable.dasd,"#1","asddas");
+        item[1]=new BestRecycleItem(R.drawable.dasd,"#2","asddas");
+        item[2]=new BestRecycleItem(R.drawable.dasd,"#3","asddas");
+        item[3]=new BestRecycleItem(R.drawable.dasd,"#4","asddas");
+        item[4]=new BestRecycleItem(R.drawable.dasd,"#5","asddas");
 
         for(int i=0;i<5;i++) items.add(item[i]);
         adapter = new BestRecycleAdapter(context.getApplicationContext(),items,R.layout.activity_main, display.getWidth()-dpToPx(57));

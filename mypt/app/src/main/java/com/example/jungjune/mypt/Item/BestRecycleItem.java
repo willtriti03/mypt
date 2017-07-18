@@ -7,18 +7,18 @@ import android.graphics.drawable.Drawable;
  */
 
 public class BestRecycleItem {
-    Drawable image;
+    int image;
     String name;
     String info;
     public BestRecycleItem(){}
 
-    public BestRecycleItem(Drawable image, String name, String info){
+    public BestRecycleItem(int image, String name, String info){
         this.image = image;
         this.name = name;
         this.info = info;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
@@ -30,7 +30,7 @@ public class BestRecycleItem {
         this.info = info;
     }
 
-    public Drawable getImage() {
+    public int getImage() {
         return image;
     }
 

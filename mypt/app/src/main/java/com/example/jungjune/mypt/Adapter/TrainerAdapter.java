@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.jungjune.mypt.Item.BestRecycleItem;
 import com.example.jungjune.mypt.Item.TrainerItem;
 import com.example.jungjune.mypt.R;
@@ -46,8 +47,8 @@ public class TrainerAdapter  extends RecyclerView.Adapter<TrainerAdapter.ViewHol
     @Override
     public void onBindViewHolder(final TrainerAdapter.ViewHolder holder, int position) {
         final TrainerItem item = items.get(position);
-        Drawable drawable = item.getDw();
-        holder.image.setBackground(drawable);
+
+        holder.image.setBackground(context.getDrawable(item.getDw()));
         holder.heart.setBackground(context.getDrawable(R.drawable.ic_trainer_like_normal));
         holder.name.setText(item.getName());
         holder.gym.setText(item.getLocation());

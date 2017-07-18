@@ -34,6 +34,11 @@ import java.util.TimerTask;
 public class CustomSearchFragment extends Fragment {
     View v;
     Context context;
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
+    ListFragment listFragment;
+    FilterFragment filterFragment;
+    CustomOptionFragment customOptionFragment;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,14 +49,29 @@ public class CustomSearchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         context = getActivity();
-        v = inflater.inflate(R.layout.fragment_search, container, false);
+        v = inflater.inflate(R.layout.fragment_cunsumer, container, false);
 
-        ListFragment fragment2 = new ListFragment();
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.trainerContent, fragment2);
+        fragmentManager = getFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+
+        listFragment = new ListFragment();
+        filterFragment = new FilterFragment();
+        customOptionFragment = new CustomOptionFragment();
+
+        filterFragment.setName("필터 열기", "높은 가격순", "높은 찜순");
+        filterFragment.setFragment(fragmentManager,fragmentTransaction,customOptionFragment);
+
+        fragmentTransaction.replace(R.id.cunsumerList, listFragment);
+        fragmentTransaction.replace(R.id.option, filterFragment);
         fragmentTransaction.commit();
+
         return v;
+    }
+
+    public void changeToFilter(){
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.option, filterFragment);
+        fragmentTransaction.commit();
     }
 
 }

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.jungjune.mypt.Item.BestRecycleItem;
 import com.example.jungjune.mypt.R;
 
@@ -53,8 +54,7 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         final BestRecycleItem item = items.get(position);
-        Drawable drawable = item.getImage();
-        holder.image.setBackground(drawable);
+        holder.image.setBackground(context.getDrawable(item.getImage()));
         holder.title.setText(item.getName());
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +68,7 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
         holder.image.setLayoutParams(layoutParams);
     }
 
-    public void addItem(Drawable dw, String name, String info) {
+    public void addItem(int dw, String name, String info) {
         items.add(new BestRecycleItem(dw, name, info));
     }
 

@@ -349,24 +349,38 @@
                         android:textColor="#757575"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
                         android:orientation="horizontal"
                         android:weightSum="10">
-                        <android.support.v7.widget.RecyclerView
-                            android:id="@+id/imageSlide"
-                            android:layout_width="0dp"
-                            android:layout_height="60dp"
-                            android:layout_weight="8">
 
-                        </android.support.v7.widget.RecyclerView>
+                        <HorizontalScrollView
+                            android:layout_width="0dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="8.5"
+                            android:overScrollMode="never"
+                            android:scrollbarSize="0dp">
+
+                            <LinearLayout
+                                android:id="@+id/imgScroll"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+
                         <LinearLayout
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
+                            android:layout_height="75dp"
+                            android:layout_weight="1.5"
                             android:gravity="bottom|right">
+
                             <Button
                                 android:id="@+id/addImage"
                                 android:layout_width="33dp"
