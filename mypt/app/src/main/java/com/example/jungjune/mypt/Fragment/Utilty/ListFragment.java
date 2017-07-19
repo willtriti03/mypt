@@ -1,4 +1,4 @@
-package com.example.jungjune.mypt.Fragment;
+package com.example.jungjune.mypt.Fragment.Utilty;
 
 import android.content.Context;
 import android.os.Bundle;

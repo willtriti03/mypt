@@ -29,7 +29,7 @@ public class LoginActivity extends Activity{
 
     @OnClick(R.id.loginBtn)
     public void login(){
-        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        startActivity(new Intent(LoginActivity.this, MainTrainerActivity.class));
         finish();
     }
 

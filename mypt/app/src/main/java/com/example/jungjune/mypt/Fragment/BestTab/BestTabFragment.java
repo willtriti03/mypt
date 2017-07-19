@@ -1,4 +1,4 @@
-package com.example.jungjune.mypt.Fragment;
+package com.example.jungjune.mypt.Fragment.BestTab;
 
 
 import android.content.Context;
@@ -18,9 +18,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.jungjune.mypt.Adapter.BestRecycleAdapter;
+import com.example.jungjune.mypt.Fragment.Utilty.ListFragment;
 import com.example.jungjune.mypt.Item.BestRecycleItem;
 import com.example.jungjune.mypt.R;
 

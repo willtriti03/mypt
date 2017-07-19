@@ -6,25 +6,30 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.Button;
 
+import com.example.jungjune.mypt.Fragment.BestTab.BestTabFragment;
 import com.example.jungjune.mypt.Fragment.CustomSearch.CustomSearchFragment;
 import com.example.jungjune.mypt.Fragment.MyPage.MyPageTrainerFragment;
 import com.example.jungjune.mypt.Fragment.MyPage.MyPageUserFragment;
+import com.example.jungjune.mypt.Fragment.SearchCunsumer.SearchCunsumerFragment;
 import com.example.jungjune.mypt.Fragment.TrainerMatching.TrainerMatchingFragment;
 import com.example.jungjune.mypt.R;
-import com.example.jungjune.mypt.Fragment.BestTab.BestTabFragment;
 import com.example.jungjune.mypt.Util.TitleBarActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ * Created by triti on 2017-07-19.
+ */
 
-public class MainActivity extends TitleBarActivity {
+public class MainTrainerActivity extends TitleBarActivity {
     FragmentManager fm;
     FragmentTransaction fragmentTransaction;
-    MyPageUserFragment myPageTab;
+    MyPageTrainerFragment myPageTabTrainer;
     CustomSearchFragment customSearchFragment;
     BestTabFragment bestTab;
+    SearchCunsumerFragment searchCunsumerFragment;
     TrainerMatchingFragment trainerMatchingFragment;
 
     Button nowBtn;
@@ -33,6 +38,7 @@ public class MainActivity extends TitleBarActivity {
     @BindView(R.id.majchumBtn)Button majchum;
     @BindView(R.id.mypageBtn)Button mypage;
     @BindView(R.id.trainerBtn)Button trainer;
+    @BindView(R.id.search_Cunsumer)Button searchCunsumer;
 
     @OnClick(R.id.bestBtn)
     public void setBest(){
@@ -51,7 +57,7 @@ public class MainActivity extends TitleBarActivity {
     @OnClick(R.id.mypageBtn)
     public  void setMypage(){
         fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,myPageTab);
+        fragmentTransaction.replace(R.id.contentPanel,myPageTabTrainer);
         fragmentTransaction.commit();
         changeTab(mypage);
     }
@@ -62,17 +68,25 @@ public class MainActivity extends TitleBarActivity {
         fragmentTransaction.commit();
         changeTab(trainer);
     }
+    @OnClick(R.id.search_Cunsumer)
+    public  void setSearchCunsumer(){
+        fragmentTransaction = fm.beginTransaction();
+        fragmentTransaction.replace(R.id.contentPanel,searchCunsumerFragment);
+        fragmentTransaction.commit();
+        changeTab(searchCunsumer);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_trainer);
         ButterKnife.bind(this);
 
         bestTab= new BestTabFragment();
-        myPageTab= new MyPageUserFragment();
+        myPageTabTrainer = new MyPageTrainerFragment();
         trainerMatchingFragment = new TrainerMatchingFragment();
         customSearchFragment = new CustomSearchFragment();
+        searchCunsumerFragment = new SearchCunsumerFragment();
 
         fm = getSupportFragmentManager();
         fragmentTransaction = fm.beginTransaction();
@@ -96,3 +110,4 @@ public class MainActivity extends TitleBarActivity {
 
 
 }
+

@@ -1,4 +1,4 @@
-package com.example.jungjune.mypt.Fragment;
+package com.example.jungjune.mypt.Fragment.SearchCunsumer;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ import java.util.List;
  * Created by triti on 2017-07-18.
  */
 
-public class CunsumerListFragment extends Fragment {
+public class SearchCunsumerListFragment extends Fragment {
     View v;
     Context context;
     RecyclerView recyclerView;

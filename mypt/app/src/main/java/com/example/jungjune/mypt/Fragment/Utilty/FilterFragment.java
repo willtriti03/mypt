@@ -1,4 +1,4 @@
-package com.example.jungjune.mypt.Fragment;
+package com.example.jungjune.mypt.Fragment.Utilty;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.jungjune.mypt.Fragment.CustomSearch.CustomOptionFragment;
+import com.example.jungjune.mypt.Fragment.SearchCunsumer.SearchCunsumerOption;
 import com.example.jungjune.mypt.R;
 
 /**
@@ -27,7 +29,7 @@ public class FilterFragment extends Fragment {
     Button option1, option2, option3, nowBtn;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
-    CustomOptionFragment customOptionFragment;
+    Fragment fragment;
 
     @Nullable
     @Override
@@ -86,12 +88,18 @@ public class FilterFragment extends Fragment {
     public void setFragment(FragmentManager fm, FragmentTransaction ft, CustomOptionFragment cf) {
         fragmentManager = fm;
         fragmentTransaction = ft;
-        customOptionFragment = cf;
+        fragment = cf;
+    }
+
+    public void setFragment(FragmentManager fm, FragmentTransaction ft, SearchCunsumerOption sco) {
+        fragmentManager = fm;
+        fragmentTransaction = ft;
+        fragment = sco;
     }
 
     public void changeToCustomOption() {
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.option, customOptionFragment);
+        fragmentTransaction.replace(R.id.option, fragment);
         fragmentTransaction.commit();
     }
 

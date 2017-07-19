@@ -1,4 +1,4 @@
-package com.example.jungjune.mypt.Fragment;
+package com.example.jungjune.mypt.Fragment.CustomSearch;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -6,26 +6,13 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.LinearSnapHelper;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SnapHelper;
-import android.util.DisplayMetrics;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
 
-import com.example.jungjune.mypt.Adapter.BestRecycleAdapter;
-import com.example.jungjune.mypt.Item.BestRecycleItem;
+import com.example.jungjune.mypt.Fragment.Utilty.FilterFragment;
+import com.example.jungjune.mypt.Fragment.Utilty.ListFragment;
 import com.example.jungjune.mypt.R;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
  * Created by jungjune on 2017-07-18.
@@ -60,6 +47,7 @@ public class CustomSearchFragment extends Fragment {
 
         filterFragment.setName("필터 열기", "높은 가격순", "높은 찜순");
         filterFragment.setFragment(fragmentManager,fragmentTransaction,customOptionFragment);
+        customOptionFragment.setFragment(fragmentManager,fragmentTransaction,filterFragment);
 
         fragmentTransaction.replace(R.id.cunsumerList, listFragment);
         fragmentTransaction.replace(R.id.option, filterFragment);
@@ -68,10 +56,5 @@ public class CustomSearchFragment extends Fragment {
         return v;
     }
 
-    public void changeToFilter(){
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.option, filterFragment);
-        fragmentTransaction.commit();
-    }
 
 }
