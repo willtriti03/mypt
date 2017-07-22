@@ -42,8 +42,8 @@
         android:id="@+id/myPageList"
         android:layout_width="match_parent"
         android:layout_height="360dp"
-        android:dividerHeight="1dp"
         android:scrollbars="none"
+        android:dividerHeight="1dp"
         android:divider="#E0E0E0">
         </ListView>
 </LinearLayout>

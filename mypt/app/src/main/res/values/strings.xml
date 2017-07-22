@@ -6,4 +6,5 @@
     <string name="registerMain">회원가입</string>
     <string name="agreement">약관 동의</string>
     <string name="profil">프로필 사진 변경</string>
+    <string name="event">이벤트</string>
 </resources>
