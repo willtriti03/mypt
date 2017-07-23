@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/round_ractangle_skyblue"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.5"
+                    android:gravity="center_vertical|left">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="트레이너 매칭중입니다."
+                        android:textColor="#ffffff"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4.5"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/editBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/best_profil_btn"
+                        android:text="수정"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/deleteBtn"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/best_profil_btn"
+                        android:text="삭제"
+                        android:textColor="#ffffff"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/man_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="김덕배"
+                    android:textColor="#757575"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="키 "
+                        android:textColor="#029AE5"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/man_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="180cm"
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="몸무게 "
+                        android:textColor="#029AE5"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/man_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="80kg"
+                        android:textColor="#757575"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#E0E0E0"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="원하는1회 금액"
+                            android:textColor="#BDBDBD"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/man_oneTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="30000원"
+                            android:textColor="#757575"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#E0E0E0"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="회수"
+                            android:textColor="#BDBDBD"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/man_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20회"
+                            android:textColor="#757575"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#E0E0E0"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="지역"
+                    android:textColor="#BDBDBD"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/man_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="지구 어디가 있는 곳"
+                    android:textColor="#757575"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#E0E0E0"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상세설명"
+                    android:textColor="#BDBDBD"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/man_introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:text="뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 뭔가 있어 보일려고 끄적거리는 글 "
+                    android:textColor="#757575"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:overScrollMode="never"
+                    android:scrollbarSize="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/imgScroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#E0E0E0"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/want"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="관심을 보인 트레이너"
+                    android:textColor="#029AE5"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="7dp"
+                    android:background="#E0E0E0"></LinearLayout>
+
+                <ListView
+                    android:id="@+id/wantedList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0dp"
+                    android:scrollbarSize="0dp"
+                    android:scrollbars="none">
+
+                </ListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"></LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

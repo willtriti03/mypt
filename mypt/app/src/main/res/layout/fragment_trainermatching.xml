@@ -336,7 +336,7 @@
                     android:padding="15dp">
 
                     <EditText
-                        android:id="@+id/introduce"
+                        android:id="@+id/man_introduce"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@android:color/transparent"

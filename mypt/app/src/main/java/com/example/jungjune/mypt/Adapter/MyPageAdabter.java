@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jungjune.mypt.Activity.EventActivity;
+import com.example.jungjune.mypt.Activity.ILikeItActivity;
 import com.example.jungjune.mypt.Item.MyPageItem;
 import com.example.jungjune.mypt.R;
 
@@ -61,6 +62,10 @@ public class MyPageAdabter extends BaseAdapter {
                 switch (listViewItem.getTo()){
                     case "event":
                         context.startActivity(new Intent(context, EventActivity.class));
+                        break;
+                    case "jjim":
+                        context.startActivity(new Intent(context, ILikeItActivity.class));
+                        break;
                 }
             }
         });

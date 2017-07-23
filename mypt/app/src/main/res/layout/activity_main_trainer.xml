@@ -53,14 +53,6 @@
                     android:layout_width="100dp"
                     android:layout_height="40dp"
                     android:background="@drawable/round_rantangle_white"
-                    android:id="@+id/trainerBtn"
-                    android:layout_marginRight="12dp"
-                    android:text="트레이너 매칭"
-                    android:textColor="#BDBDBD" />
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/round_rantangle_white"
                     android:id="@+id/search_Cunsumer"
                     android:layout_marginRight="12dp"
                     android:text="고객 검색"

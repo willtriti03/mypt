@@ -29,7 +29,7 @@ public class LoginActivity extends Activity{
 
     @OnClick(R.id.loginBtn)
     public void login(){
-        startActivity(new Intent(LoginActivity.this, MainTrainerActivity.class));
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
         finish();
     }
 
@@ -40,7 +40,8 @@ public class LoginActivity extends Activity{
 
     @OnClick(R.id.findID)
     public void findID(){
-
+        startActivity(new Intent(LoginActivity.this, MainTrainerActivity.class));
+        finish();
     }
 
     @Override

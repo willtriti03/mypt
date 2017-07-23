@@ -37,7 +37,6 @@ public class MainTrainerActivity extends TitleBarActivity {
     @BindView(R.id.bestBtn)Button best;
     @BindView(R.id.majchumBtn)Button majchum;
     @BindView(R.id.mypageBtn)Button mypage;
-    @BindView(R.id.trainerBtn)Button trainer;
     @BindView(R.id.search_Cunsumer)Button searchCunsumer;
 
     @OnClick(R.id.bestBtn)
@@ -61,13 +60,7 @@ public class MainTrainerActivity extends TitleBarActivity {
         fragmentTransaction.commit();
         changeTab(mypage);
     }
-    @OnClick(R.id.trainerBtn)
-    public void setTrainer(){
-        fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,trainerMatchingFragment);
-        fragmentTransaction.commit();
-        changeTab(trainer);
-    }
+
     @OnClick(R.id.search_Cunsumer)
     public  void setSearchCunsumer(){
         fragmentTransaction = fm.beginTransaction();

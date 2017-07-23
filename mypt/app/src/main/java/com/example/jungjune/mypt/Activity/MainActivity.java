@@ -10,6 +10,7 @@ import com.example.jungjune.mypt.Fragment.CustomSearch.CustomSearchFragment;
 import com.example.jungjune.mypt.Fragment.MyPage.MyPageTrainerFragment;
 import com.example.jungjune.mypt.Fragment.MyPage.MyPageUserFragment;
 import com.example.jungjune.mypt.Fragment.TrainerMatching.TrainerMatchingFragment;
+import com.example.jungjune.mypt.Fragment.TrainerMatching.TrainerMatchingNowFragment;
 import com.example.jungjune.mypt.R;
 import com.example.jungjune.mypt.Fragment.BestTab.BestTabFragment;
 import com.example.jungjune.mypt.Util.TitleBarActivity;
@@ -26,6 +27,7 @@ public class MainActivity extends TitleBarActivity {
     CustomSearchFragment customSearchFragment;
     BestTabFragment bestTab;
     TrainerMatchingFragment trainerMatchingFragment;
+    TrainerMatchingNowFragment trainerMatchingNowFragment;
 
     Button nowBtn;
     @BindView(R.id.search_bar)Button search;
@@ -58,7 +60,7 @@ public class MainActivity extends TitleBarActivity {
     @OnClick(R.id.trainerBtn)
     public void setTrainer(){
         fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,trainerMatchingFragment);
+        fragmentTransaction.replace(R.id.contentPanel,trainerMatchingNowFragment);
         fragmentTransaction.commit();
         changeTab(trainer);
     }
@@ -72,6 +74,7 @@ public class MainActivity extends TitleBarActivity {
         bestTab= new BestTabFragment();
         myPageTab= new MyPageUserFragment();
         trainerMatchingFragment = new TrainerMatchingFragment();
+        trainerMatchingNowFragment = new TrainerMatchingNowFragment();
         customSearchFragment = new CustomSearchFragment();
 
         fm = getSupportFragmentManager();
