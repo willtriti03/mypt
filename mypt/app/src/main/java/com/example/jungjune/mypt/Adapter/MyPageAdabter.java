@@ -1,6 +1,7 @@
 package com.example.jungjune.mypt.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jungjune.mypt.Activity.EventActivity;
 import com.example.jungjune.mypt.Item.MyPageItem;
 import com.example.jungjune.mypt.R;
 
@@ -48,11 +50,20 @@ public class MyPageAdabter extends BaseAdapter {
         ImageView iconImageView = (ImageView) convertView.findViewById(R.id.icons);
         TextView titleTextView = (TextView) convertView.findViewById(R.id.content);
 
-        MyPageItem listViewItem = listViewItemList.get(position);
+        final MyPageItem listViewItem = listViewItemList.get(position);
 
         iconImageView.setBackground(listViewItem.getImg());
         titleTextView.setText(listViewItem.getContent());
 
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (listViewItem.getTo()){
+                    case "event":
+                        context.startActivity(new Intent(context, EventActivity.class));
+                }
+            }
+        });
         return convertView;
     }
 

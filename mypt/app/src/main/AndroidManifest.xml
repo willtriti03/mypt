@@ -27,6 +27,7 @@
         <activity android:name=".Activity.AgreementActivity"></activity>
         <activity android:name=".Activity.MainTrainerActivity"></activity>
         <activity android:name=".Activity.ChangProfilmage"></activity>
+        <activity android:name=".Activity.EventActivity"></activity>
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
