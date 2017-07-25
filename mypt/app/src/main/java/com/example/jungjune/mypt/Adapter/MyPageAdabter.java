@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.jungjune.mypt.Activity.EventActivity;
 import com.example.jungjune.mypt.Activity.ILikeItActivity;
+import com.example.jungjune.mypt.Activity.NoticeActivity;
 import com.example.jungjune.mypt.Item.MyPageItem;
 import com.example.jungjune.mypt.R;
 
@@ -65,6 +66,9 @@ public class MyPageAdabter extends BaseAdapter {
                         break;
                     case "jjim":
                         context.startActivity(new Intent(context, ILikeItActivity.class));
+                        break;
+                    case "notice":
+                        context.startActivity(new Intent(context, NoticeActivity.class));
                         break;
                 }
             }

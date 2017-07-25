@@ -29,6 +29,8 @@
         <activity android:name=".Activity.ChangProfilmage"></activity>
         <activity android:name=".Activity.EventActivity"></activity>
         <activity android:name=".Activity.ILikeItActivity"></activity>
+        <activity android:name=".Activity.NoticeActivity"></activity>
+        <activity android:name=".Activity.ProfilViewActivity"></activity>
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

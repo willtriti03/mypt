@@ -8,4 +8,6 @@
     <string name="profil">프로필 사진 변경</string>
     <string name="event">이벤트</string>
     <string name="likeIt">찜 목록</string>
+    <string name="profilView">프로필 보기</string>
+    <string name="notice">공지사항</string>
 </resources>
