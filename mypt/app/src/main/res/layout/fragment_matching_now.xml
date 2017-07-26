@@ -8,6 +8,7 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clipChildren="false"
         android:layout_marginBottom="-15dp">
 
         <LinearLayout
@@ -310,7 +311,9 @@
                     android:divider="@android:color/transparent"
                     android:dividerHeight="0dp"
                     android:scrollbarSize="0dp"
-                    android:scrollbars="none">
+                    android:scrollbars="none"
+                    android:clipChildren="false"
+                    >
 
                 </ListView>
 

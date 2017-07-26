@@ -33,10 +33,9 @@ public class TrainerMatchingNowFragment extends Fragment {
         listView = (ListView)view.findViewById(R.id.wantedList);
         adapter = new WantedAdapter();
         listView.setAdapter(adapter);
-        adapter.addItem(new ArrayList<String>(),"이이름","길게 치기 위해 막 치고 있는 텍스트입니다 쌰쌰ㅑ쌰쌰썄ㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆ");
-        adapter.addItem(new ArrayList<String>(),"이이름","길게 치기 위해 막 치고 있는 텍스트입니다 쌰쌰ㅑ쌰쌰썄ㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆ");
-        adapter.addItem(new ArrayList<String>(),"이이름","길게 치기 위해 막 치고 있는 텍스트입니다 쌰쌰ㅑ쌰쌰썄ㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆ");
-        //listView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, (adapter.getCount()+1)*dpToPx(104)));
+        adapter.addItem(new ArrayList<String>(),"이이름","길게 치기 위해 막 치고 있는 텍스트입니다 쌰쌰ㅑ쌰쌰썄ㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆ","1시간");
+        adapter.addItem(new ArrayList<String>(),"이이름","길게 치기 위해 막 치고 있는 텍스트입니다 쌰쌰ㅑ쌰쌰썄ㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆㅆ","2시간");
+        listView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, (adapter.getCount())*dpToPx(130)));
         adapter.notifyDataSetChanged();
 
         return view;

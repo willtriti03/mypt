@@ -2,9 +2,14 @@ package com.example.jungjune.mypt.Activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.jungjune.mypt.Fragment.CustomSearch.CustomSearchFragment;
 import com.example.jungjune.mypt.Fragment.MyPage.MyPageTrainerFragment;
@@ -30,38 +35,44 @@ public class MainActivity extends TitleBarActivity {
     TrainerMatchingNowFragment trainerMatchingNowFragment;
 
     Button nowBtn;
-    @BindView(R.id.search_bar)Button search;
-    @BindView(R.id.bestBtn)Button best;
-    @BindView(R.id.majchumBtn)Button majchum;
-    @BindView(R.id.mypageBtn)Button mypage;
-    @BindView(R.id.trainerBtn)Button trainer;
+    @BindView(R.id.search_bar)
+    Button search;
+    @BindView(R.id.bestBtn)
+    Button best;
+    @BindView(R.id.majchumBtn)
+    Button majchum;
+    @BindView(R.id.mypageBtn)
+    Button mypage;
+    @BindView(R.id.trainerBtn)
+    Button trainer;
+    @BindView(R.id.contentPanel)
+    ViewPager vp;
 
     @OnClick(R.id.bestBtn)
-    public void setBest(){
-        fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,bestTab);
-        fragmentTransaction.commit();
+    public void setBest() {
+        int tag = (int) best.getTag();
+        vp.setCurrentItem(tag);
         changeTab(best);
     }
+
     @OnClick(R.id.majchumBtn)
-    public void setMajchum(){
-        fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,customSearchFragment);
-        fragmentTransaction.commit();
+    public void setMajchum() {
+        int tag = (int) majchum.getTag();
+        vp.setCurrentItem(tag);
         changeTab(majchum);
     }
+
     @OnClick(R.id.mypageBtn)
-    public  void setMypage(){
-        fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,myPageTab);
-        fragmentTransaction.commit();
+    public void setMypage() {
+        int tag = (int) mypage.getTag();
+        vp.setCurrentItem(tag);
         changeTab(mypage);
     }
+
     @OnClick(R.id.trainerBtn)
-    public void setTrainer(){
-        fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,trainerMatchingNowFragment);
-        fragmentTransaction.commit();
+    public void setTrainer() {
+        int tag = (int) trainer.getTag();
+        vp.setCurrentItem(tag);
         changeTab(trainer);
     }
 
@@ -71,17 +82,35 @@ public class MainActivity extends TitleBarActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        bestTab= new BestTabFragment();
-        myPageTab= new MyPageUserFragment();
+        bestTab = new BestTabFragment();
+        myPageTab = new MyPageUserFragment();
         trainerMatchingFragment = new TrainerMatchingFragment();
         trainerMatchingNowFragment = new TrainerMatchingNowFragment();
         customSearchFragment = new CustomSearchFragment();
 
-        fm = getSupportFragmentManager();
-        fragmentTransaction = fm.beginTransaction();
-        fragmentTransaction.replace(R.id.contentPanel,bestTab);
-        fragmentTransaction.commit();
-        nowBtn= best;
+        best.setTag(0);
+        majchum.setTag(1);
+        trainer.setTag(2);
+        mypage.setTag(3);
+
+        vp.setAdapter(new pagerAdapter(fm = getSupportFragmentManager()));
+        nowBtn = best;
+
+        vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                changeTab();
+            }
+        });
 
     }
 
@@ -89,13 +118,68 @@ public class MainActivity extends TitleBarActivity {
     protected void onResume() {
         super.onResume();
     }
-    public void changeTab(Button toBtn){
+
+    public void changeTab(Button toBtn) {
         nowBtn.setBackground(getDrawable(R.drawable.round_rantangle_white));
         nowBtn.setTextColor(Color.parseColor("#BDBDBD"));
         toBtn.setBackground(getDrawable(R.drawable.round_ractangle_skyblue));
         toBtn.setTextColor(Color.parseColor("#ffffff"));
-        nowBtn=toBtn;
+
+        nowBtn = toBtn;
+    }
+
+    public void changeTab() {
+        nowBtn.setBackground(getDrawable(R.drawable.round_rantangle_white));
+        nowBtn.setTextColor(Color.parseColor("#BDBDBD"));
+        Button toBtn = null;
+        switch (vp.getCurrentItem()) {
+            case 0:
+                toBtn = best;
+                break;
+            case 1:
+                toBtn = majchum;
+                break;
+            case 2:
+                toBtn = trainer;
+                break;
+            case 3:
+                toBtn = mypage;
+                break;
+        }
+        toBtn.setBackground(getDrawable(R.drawable.round_ractangle_skyblue));
+        toBtn.setTextColor(Color.parseColor("#ffffff"));
+
+        nowBtn = toBtn;
     }
 
 
+    private class pagerAdapter extends FragmentStatePagerAdapter {
+        public pagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return bestTab;
+                case 1:
+                    return customSearchFragment;
+                case 2:
+                    return trainerMatchingNowFragment;
+                case 3:
+                    return myPageTab;
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 4;
+        }
+    }
 }
+
+
+

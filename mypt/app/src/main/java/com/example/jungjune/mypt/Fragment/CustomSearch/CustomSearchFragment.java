@@ -49,8 +49,8 @@ public class CustomSearchFragment extends Fragment {
         filterFragment.setFragment(fragmentManager,fragmentTransaction,customOptionFragment);
         customOptionFragment.setFragment(fragmentManager,fragmentTransaction,filterFragment);
 
-        fragmentTransaction.replace(R.id.cunsumerList, listFragment);
-        fragmentTransaction.replace(R.id.option, filterFragment);
+        fragmentTransaction.replace(R.id.searchTrainerList, listFragment);
+        fragmentTransaction.replace(R.id.searchTrainerOption, filterFragment);
         fragmentTransaction.commit();
 
         return v;

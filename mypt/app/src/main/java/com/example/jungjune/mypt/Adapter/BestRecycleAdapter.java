@@ -2,6 +2,7 @@ package com.example.jungjune.mypt.Adapter;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.v7.widget.CardView;
@@ -9,10 +10,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.jungjune.mypt.Activity.ProfilViewActivity;
 import com.example.jungjune.mypt.Item.BestRecycleItem;
 import com.example.jungjune.mypt.R;
 
@@ -59,10 +62,14 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
-
+        holder.profil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, ProfilViewActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            }
+        });
         android.view.ViewGroup.LayoutParams layoutParams = holder.image.getLayoutParams();
         layoutParams.width = getWidth();
         holder.image.setLayoutParams(layoutParams);
@@ -81,13 +88,14 @@ public class BestRecycleAdapter extends RecyclerView.Adapter<BestRecycleAdapter.
         ImageView image;
         TextView title;
         CardView cardview;
+        Button profil;
 
         public ViewHolder(View itemView) {
             super(itemView);
             cardview = (CardView) itemView.findViewById(R.id.cardview);
             image = (ImageView) itemView.findViewById(R.id.image);
             title = (TextView) itemView.findViewById(R.id.name);
-
+            profil=(Button) itemView.findViewById(R.id.profil);
 
         }
     }

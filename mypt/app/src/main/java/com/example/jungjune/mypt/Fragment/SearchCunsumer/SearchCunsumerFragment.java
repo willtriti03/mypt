@@ -37,7 +37,7 @@ public class SearchCunsumerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         context = getActivity();
-        v = inflater.inflate(R.layout.fragment_cunsumer, container, false);
+        v = inflater.inflate(R.layout.fragment_search_cunsumer, container, false);
 
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();

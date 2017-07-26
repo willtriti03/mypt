@@ -2,6 +2,7 @@ package com.example.jungjune.mypt.Adapter;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -17,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.jungjune.mypt.Activity.ProfilViewActivity;
 import com.example.jungjune.mypt.Item.BestRecycleItem;
 import com.example.jungjune.mypt.Item.TrainerItem;
 import com.example.jungjune.mypt.R;
@@ -63,7 +65,7 @@ public class TrainerAdapter  extends RecyclerView.Adapter<TrainerAdapter.ViewHol
         holder.image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                context.startActivity(new Intent(context, ProfilViewActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             }
         });
         holder.likeBtn.setOnClickListener(new View.OnClickListener() {

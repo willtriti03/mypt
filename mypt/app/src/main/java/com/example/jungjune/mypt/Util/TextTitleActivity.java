@@ -20,6 +20,7 @@ public class TextTitleActivity  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
+
     }
     public void setTitle(int title){
         getSupportActionBar().setTitle(title);

@@ -38,7 +38,7 @@ public class MyPageUserFragment  extends Fragment {
         MyPageAdabter myPageAdabter= new MyPageAdabter();
         myPageAdabter.notifyDataSetChanged();
         myPageAdabter.addItem(context.getDrawable(R.drawable.ic_trainer_like_normal),"찜 목록","jjim");
-        myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_review),"익명 후기 보기","review");
+        myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_review),"남긴 익명 후기 보기","writtenReview");
         myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_ptresult),"PT 결과","result");
         myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_notice),"공지사항","notice");
         myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_cs),"고객센터","callcenter");

@@ -1,26 +1,31 @@
 package com.example.jungjune.mypt.Item;
 
-import java.util.ArrayList;
 
 /**
- * Created by jungjune on 2017-07-23.
+ * Created by jungjune on 2017-07-26.
  */
 
-public class WantedItem {
-    ArrayList<String> imageList = new ArrayList<String>();
+public class WrittenReviewItem {
+    String image;
     String name;
     String introduce;
     String time;
-    public WantedItem(ArrayList<String> arr, String name, String introduce,String time){
-        this.imageList =arr;
+    String to;
+    public WrittenReviewItem(String image,String name, String introduce,String time,String to){
+        this.image=image;
         this.name = name;
         this.introduce = introduce;
         this.time= time;
+        this.to =to;
 
     }
 
-    public void setImageList(ArrayList<String> imageList) {
-        this.imageList = imageList;
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public void setIntroduce(String introduce) {
@@ -39,8 +44,8 @@ public class WantedItem {
         return time;
     }
 
-    public ArrayList<String> getImageList() {
-        return imageList;
+    public String getTo() {
+        return to;
     }
 
     public String getIntroduce() {
@@ -49,5 +54,9 @@ public class WantedItem {
 
     public String getName() {
         return name;
+    }
+
+    public String getImage() {
+        return image;
     }
 }

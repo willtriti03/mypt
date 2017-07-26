@@ -59,7 +59,7 @@ public class WantedAdapter extends BaseAdapter {
         img[4] = (ImageView)convertView.findViewById(R.id.img5);
         TextView name = (TextView)convertView.findViewById(R.id.want_name);
         TextView introduce = (TextView)convertView.findViewById(R.id.want_introduce);
-
+        TextView timeAgo    =(TextView)convertView.findViewById(R.id.want_timeAgo);
         WantedItem listViewItem = listViewItemList.get(position);
         arrayList = listViewItem.getImageList();
         /*
@@ -75,7 +75,7 @@ public class WantedAdapter extends BaseAdapter {
 
         name.setText(listViewItem.getName());
         introduce.setText(listViewItem.getIntroduce());
-
+        timeAgo.setText(listViewItem.getTime()+"전");
 
         return convertView;
     }
@@ -91,8 +91,8 @@ public class WantedAdapter extends BaseAdapter {
         return listViewItemList.get(position);
     }
 
-    public void addItem(ArrayList<String> arr, String content, String to) {
-        WantedItem item = new WantedItem(arr,content,to);
+    public void addItem(ArrayList<String> arr, String content, String to,String time) {
+        WantedItem item = new WantedItem(arr,content,to,time);
         listViewItemList.add(item);
     }
 }

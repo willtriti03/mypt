@@ -16,7 +16,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/option"
+                android:id="@+id/searchTrainerOption"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -29,7 +29,7 @@
                 android:background="@drawable/gray_line"
                 android:layout_marginBottom="7dp"/>
             <LinearLayout
-                android:id="@+id/cunsumerList"
+                android:id="@+id/searchTrainerList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"></LinearLayout>

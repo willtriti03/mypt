@@ -1,14 +1,19 @@
 package com.example.jungjune.mypt.Adapter;
 
 import android.content.Context;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.jungjune.mypt.Activity.NoticeActivity;
+import com.example.jungjune.mypt.Fragment.Utilty.NoticeFragment;
 import com.example.jungjune.mypt.Item.EventItem;
 import com.example.jungjune.mypt.Item.NoticeItem;
 import com.example.jungjune.mypt.R;
@@ -20,6 +25,8 @@ import java.util.ArrayList;
  */
 
 public class NoticeAdapter extends BaseAdapter {
+    FragmentManager fm;
+    FragmentTransaction fragmentTransaction;
     private ArrayList<NoticeItem> listViewItemList = new ArrayList<NoticeItem>();
 
     public NoticeAdapter() {
@@ -45,12 +52,24 @@ public class NoticeAdapter extends BaseAdapter {
 
         TextView noticeText =(TextView)convertView.findViewById(R.id.noticeName);
         TextView noticeDate =(TextView)convertView.findViewById(R.id.noticeDate);
-
+        LinearLayout tab =(LinearLayout)convertView.findViewById(R.id.tab);
+        LinearLayout noticePanel =(LinearLayout)convertView.findViewById(R.id.noticePanel);
         NoticeItem listViewItem = listViewItemList.get(position);
 
         noticeText.setText(listViewItem.getName());
         noticeDate.setText(listViewItem.getDate());
+        noticePanel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fm = ((NoticeActivity)context).getSupportFragmentManager();
+                fragmentTransaction = fm.beginTransaction();
 
+                NoticeFragment noticeFragment = new NoticeFragment();
+                noticeFragment.setFragment(fm,fragmentTransaction,noticeFragment,"내용내용냉ㄴ\n dasdsadsadjwqundci\n\ndasdsadqwdiqdhcbicue\nsadsadadsad\n\n");
+                fragmentTransaction.replace(R.id.tab,noticeFragment);
+                fragmentTransaction.commit();
+            }
+        });
         return convertView;
     }
 

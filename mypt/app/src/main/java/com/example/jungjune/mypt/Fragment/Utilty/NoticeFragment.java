@@ -31,6 +31,8 @@ public class NoticeFragment extends Fragment {
     Context context;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    NoticeFragment noticeFragment;
+    String content;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -38,18 +40,22 @@ public class NoticeFragment extends Fragment {
         v = inflater.inflate(R.layout.fragment_notice, container, false);
         TextView textView = v.findViewById(R.id.context);
         Button close = v.findViewById(R.id.close);
-        textView.setText("sdadsdasdsadasdsdadasdsadsad\ndsadqwdqdqwdqwdqwdqwdqwdqdq\n\n\n\n\ndadadsadasd\ndasdas");
+        textView.setText(content);
 
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fragmentTransaction.remove(NoticeFragment.this);
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.remove(noticeFragment);
+                fragmentTransaction.commit();
             }
         });
         return v;
     }
-    public void setFragment(FragmentManager fragmentManager, FragmentTransaction fragmentTransaction){
+    public void setFragment(FragmentManager fragmentManager, FragmentTransaction fragmentTransaction,NoticeFragment noticeFragment,String content){
         this.fragmentManager = fragmentManager;
         this.fragmentTransaction = fragmentTransaction;
+        this.content = content;
+        this.noticeFragment =noticeFragment;
     }
 }
