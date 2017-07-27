@@ -50,29 +50,25 @@ public class MainActivity extends TitleBarActivity {
 
     @OnClick(R.id.bestBtn)
     public void setBest() {
-        int tag = (int) best.getTag();
-        vp.setCurrentItem(tag);
+        fm.beginTransaction().replace(R.id.contentPanel,bestTab).commit();
         changeTab(best);
     }
 
     @OnClick(R.id.majchumBtn)
     public void setMajchum() {
-        int tag = (int) majchum.getTag();
-        vp.setCurrentItem(tag);
+        fm.beginTransaction().replace(R.id.contentPanel,customSearchFragment).commit();
         changeTab(majchum);
     }
 
     @OnClick(R.id.mypageBtn)
     public void setMypage() {
-        int tag = (int) mypage.getTag();
-        vp.setCurrentItem(tag);
+        fm.beginTransaction().replace(R.id.contentPanel,myPageTab).commit();
         changeTab(mypage);
     }
 
     @OnClick(R.id.trainerBtn)
     public void setTrainer() {
-        int tag = (int) trainer.getTag();
-        vp.setCurrentItem(tag);
+        fm.beginTransaction().replace(R.id.contentPanel,trainerMatchingFragment).commit();
         changeTab(trainer);
     }
 
@@ -88,29 +84,11 @@ public class MainActivity extends TitleBarActivity {
         trainerMatchingNowFragment = new TrainerMatchingNowFragment();
         customSearchFragment = new CustomSearchFragment();
 
-        best.setTag(0);
-        majchum.setTag(1);
-        trainer.setTag(2);
-        mypage.setTag(3);
-
-        vp.setAdapter(new pagerAdapter(fm = getSupportFragmentManager()));
+        fm=getSupportFragmentManager();
+        fm.beginTransaction().replace(R.id.contentPanel,bestTab).commit();
         nowBtn = best;
 
-        vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                changeTab();
-            }
-        });
 
     }
 
@@ -128,57 +106,6 @@ public class MainActivity extends TitleBarActivity {
         nowBtn = toBtn;
     }
 
-    public void changeTab() {
-        nowBtn.setBackground(getDrawable(R.drawable.round_rantangle_white));
-        nowBtn.setTextColor(Color.parseColor("#BDBDBD"));
-        Button toBtn = null;
-        switch (vp.getCurrentItem()) {
-            case 0:
-                toBtn = best;
-                break;
-            case 1:
-                toBtn = majchum;
-                break;
-            case 2:
-                toBtn = trainer;
-                break;
-            case 3:
-                toBtn = mypage;
-                break;
-        }
-        toBtn.setBackground(getDrawable(R.drawable.round_ractangle_skyblue));
-        toBtn.setTextColor(Color.parseColor("#ffffff"));
-
-        nowBtn = toBtn;
-    }
-
-
-    private class pagerAdapter extends FragmentStatePagerAdapter {
-        public pagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return bestTab;
-                case 1:
-                    return customSearchFragment;
-                case 2:
-                    return trainerMatchingNowFragment;
-                case 3:
-                    return myPageTab;
-                default:
-                    return null;
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return 4;
-        }
-    }
 }
 
 

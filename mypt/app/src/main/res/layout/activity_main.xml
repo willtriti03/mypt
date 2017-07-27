@@ -76,15 +76,13 @@
         android:clipChildren="false"
         android:orientation="vertical">
 
-        <android.support.v4.view.ViewPager
+        <LinearLayout
             android:id="@+id/contentPanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fadingEdge="none"
-            android:overScrollMode="never"
-            android:scrollbars="none">
+            android:orientation="vertical">
 
-        </android.support.v4.view.ViewPager>
+        </LinearLayout>
     </LinearLayout>
 
 
