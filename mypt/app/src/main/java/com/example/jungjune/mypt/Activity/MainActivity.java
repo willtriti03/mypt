@@ -45,8 +45,6 @@ public class MainActivity extends TitleBarActivity {
     Button mypage;
     @BindView(R.id.trainerBtn)
     Button trainer;
-    @BindView(R.id.contentPanel)
-    ViewPager vp;
 
     @OnClick(R.id.bestBtn)
     public void setBest() {

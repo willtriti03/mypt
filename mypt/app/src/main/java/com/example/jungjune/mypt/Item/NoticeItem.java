@@ -5,10 +5,11 @@ package com.example.jungjune.mypt.Item;
  */
 
 public class NoticeItem {
-    String name; String date; String to;
-    public NoticeItem (String name, String date, String to){
+    String name; String date; String to,text;
+    public NoticeItem (String name, String date, String text,String to){
         this.name=name;
         this.date=date;
+        this.text=text;
         this.to=to;
     }
 
@@ -22,6 +23,14 @@ public class NoticeItem {
 
     public String getTo() {
         return to;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getText() {
+        return text;
     }
 
     public void setDate(String date) {

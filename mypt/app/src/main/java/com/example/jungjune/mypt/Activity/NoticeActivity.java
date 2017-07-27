@@ -24,10 +24,10 @@ public class NoticeActivity extends TextTitleActivity {
         setContentView(R.layout.activity_notice);
         ButterKnife.bind(this);
         noticeAdapter =new  NoticeAdapter();
-        noticeAdapter.addItem("시나는나아아아낭아ㅏ","2018.5.21","");
-        noticeAdapter.addItem("시나는나아아아낭아ㅏ","2018.5.21","");
-        noticeAdapter.addItem("시나는나아아아낭아ㅏ","2018.5.21","");
-        noticeAdapter.addItem("시나는나아아아낭아ㅏ","2018.5.21","");
+        noticeAdapter.addItem("시나는나아아아낭아ㅏ","2018.5.21","dadasdsadsadas\nsdawfsf\nsdasdwqfd\n","");
+        noticeAdapter.addItem("시나는나아아아낭아ㅏ","2018.5.21","dadasdsadsadas\nsdawfsf\nsdasdwqfd\n","");
+        noticeAdapter.addItem("시나는나아아아낭아ㅏ","2018.5.21","dadasdsadsadas\nsdawfsf\nsdasdwqfd\n","");
+        noticeAdapter.addItem("시나는나아아아낭아ㅏ","2018.5.21","dadasdsadsadas\nsdawfsf\nsdasdwqfd\n","");
         noticeList.setAdapter(noticeAdapter);
 
     }
