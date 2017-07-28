@@ -54,7 +54,7 @@ public class NoticeAdapter extends BaseAdapter {
         final TextView content = (TextView)convertView.findViewById(R.id.context);
         Button close =(Button)convertView.findViewById(R.id.close);
         final NoticeItem listViewItem = listViewItemList.get(position);
-    
+
         tab.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,0));
         noticeText.setText(listViewItem.getName());
         noticeDate.setText(listViewItem.getDate());
