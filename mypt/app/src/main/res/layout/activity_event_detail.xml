@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_event_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="9"
+    tools:context="com.example.jungjune.mypt.Activity.EventDetailActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView"
+            android:scaleType="centerCrop"
+            android:src="@drawable/aaasss"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <LinearLayout
+            android:weightSum="30"
+            android:layout_weight="6"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:textSize="16sp"
+                android:textAlignment="viewStart"
+                android:gravity="center"
+                android:text="히어로즈 오브더 스톰 2.0 업데이트 기념 이벤트"
+                android:textColor="#626262"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:id="@+id/title" />
+
+            <TextView
+                android:textSize="11sp"
+                android:textColor="#afafaf"
+                android:textAlignment="viewStart"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="2017.01.24"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/date" />
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:background="#d9d9d9"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:textSize="12sp"
+                    android:textColor="#626262"
+                    android:text="기간"
+                    android:textAlignment="viewStart"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/term"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="#626262"
+                    android:text="2017.04.04 ~ 04.05"
+                    android:textAlignment="viewStart"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <android.support.v4.widget.Space
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/context"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="#626262"
+                android:textAlignment="viewStart"
+                android:gravity="top"
+                android:text="참여방법"
+                android:layout_weight="21"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

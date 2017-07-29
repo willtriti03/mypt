@@ -1,6 +1,7 @@
 package com.example.jungjune.mypt.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.jungjune.mypt.Activity.EventDetailActivity;
 import com.example.jungjune.mypt.Item.EventItem;
 import com.example.jungjune.mypt.Item.MyPageItem;
 import com.example.jungjune.mypt.R;
@@ -50,6 +52,12 @@ public class EventAdapter extends BaseAdapter {
 
         EventItem listViewItem = listViewItemList.get(position);
 
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, EventDetailActivity.class));
+            }
+        });
        // imageView.setBackground(context.getDrawable(R.drawable.aaasss));
         Glide.with(context).load(R.drawable.aaasss).centerCrop().into(imageView);
         eventText.setText(listViewItem.getName());

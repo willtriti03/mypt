@@ -32,6 +32,16 @@
         <activity android:name=".Activity.NoticeActivity"></activity>
         <activity android:name=".Activity.ProfilViewActivity"></activity>
         <activity android:name=".Activity.WrittenReviewActivity"></activity>
+        <activity android:name=".Activity.ResultActivity"></activity>
+        <activity android:name=".Activity.CenterActivity"></activity>
+        <activity android:name=".Activity.EditProfileActivity"></activity>
+        <activity android:name=".Activity.EventDetailActivity"></activity>
+        <activity android:name=".Activity.ReviewActivity"></activity>
+        <activity android:name=".Activity.ReviewListActivity"></activity>
+        <activity android:name=".Activity.ReviewWriteActivity"></activity>
+        <activity android:name=".Activity.SearchActivity"></activity>
+        <activity android:name=".Activity.TrainerPTResultActivity"></activity>
+        <activity android:name=".Activity.WriteReplyActivity"></activity>
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

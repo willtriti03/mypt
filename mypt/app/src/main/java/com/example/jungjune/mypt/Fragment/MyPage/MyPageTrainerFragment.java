@@ -58,7 +58,7 @@ public class MyPageTrainerFragment extends Fragment {
         ListView lv =  v.findViewById(R.id.myPageList);
         MyPageAdabter myPageAdabter= new MyPageAdabter();
         myPageAdabter.notifyDataSetChanged();
-        myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_ptresult),"PT 결과","result");
+        myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_ptresult),"PT 결과","resultT");
         myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_review),"익명 후기 보기","review");
         myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_spec),"스펙","spec");
         myPageAdabter.addItem(context.getDrawable(R.drawable.ic_myp_notice),"공지사항","notice");

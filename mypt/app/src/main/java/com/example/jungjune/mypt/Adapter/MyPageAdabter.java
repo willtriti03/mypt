@@ -12,10 +12,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.jungjune.mypt.Activity.CenterActivity;
 import com.example.jungjune.mypt.Activity.EventActivity;
 import com.example.jungjune.mypt.Activity.ILikeItActivity;
 import com.example.jungjune.mypt.Activity.NoticeActivity;
+import com.example.jungjune.mypt.Activity.ResultActivity;
+import com.example.jungjune.mypt.Activity.ReviewListActivity;
 import com.example.jungjune.mypt.Activity.SpecActivity;
+import com.example.jungjune.mypt.Activity.TrainerPTResultActivity;
 import com.example.jungjune.mypt.Activity.WrittenReviewActivity;
 import com.example.jungjune.mypt.Item.MyPageItem;
 import com.example.jungjune.mypt.R;
@@ -79,6 +83,18 @@ public class MyPageAdabter extends BaseAdapter {
                         context.startActivity(new Intent(context, SpecActivity.class).putExtra("people", "24")
                                 .putExtra("career","4").putExtra("lisence","dasdasdd\ndsadsaddsa")
                                 .putExtra("prize","dsdasdsadsadasdsadsa\ndsadasdsadas\nsadasdsa"));
+                        break;
+                    case "callcenter":
+                        context.startActivity(new Intent(context, CenterActivity.class));
+                        break;
+                    case "result":
+                        context.startActivity(new Intent(context, ResultActivity.class));
+                        break;
+                    case "resultT":
+                        context.startActivity(new Intent(context, TrainerPTResultActivity.class));
+                        break;
+                    case "review":
+                        context.startActivity(new Intent(context, ReviewListActivity.class));
                         break;
                 }
             }

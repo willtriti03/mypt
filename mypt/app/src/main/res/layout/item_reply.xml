@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+    <ImageView
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_reply"
+        android:layout_width="12dp"
+        android:layout_height="12dp" />
+    <TextView
+        android:id="@+id/content"
+        android:textColor="#1885E2"
+        android:textSize="10sp"
+        android:text="정말정말 감사드립니다 발전하는 트레이너가 되도록 하겠습니다 ^^"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

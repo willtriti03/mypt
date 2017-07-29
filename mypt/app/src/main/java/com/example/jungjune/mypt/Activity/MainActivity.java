@@ -1,5 +1,6 @@
 package com.example.jungjune.mypt.Activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -45,6 +46,12 @@ public class MainActivity extends TitleBarActivity {
     Button mypage;
     @BindView(R.id.trainerBtn)
     Button trainer;
+
+    @OnClick(R.id.search_bar)
+    public  void search(){
+        startActivity(new Intent(MainActivity.this, SearchActivity.class));
+    }
+
 
     @OnClick(R.id.bestBtn)
     public void setBest() {

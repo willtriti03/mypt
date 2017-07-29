@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="16dp"
+    android:weightSum="12"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_weight="4"
+        android:id="@+id/cardview"
+        android:background="@drawable/round_box"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:textSize="10sp"
+        android:textColor="#e4e4e4"
+        android:text="네 안녕하세요 퍼스널 트레이너 스포애니 강남점 에 근무중인 김덕배 트레이너 입니다. 회원님의 3 개월간 변화 지금부터 시작합니다."
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

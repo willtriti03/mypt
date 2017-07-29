@@ -1,6 +1,7 @@
 package com.example.jungjune.mypt.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.jungjune.mypt.Activity.ReviewActivity;
 import com.example.jungjune.mypt.Item.EventItem;
 import com.example.jungjune.mypt.Item.WrittenReviewItem;
 import com.example.jungjune.mypt.R;
@@ -62,6 +64,12 @@ public class WrittenReviewAdapter extends BaseAdapter {
             public void onClick(View view) {
                 listViewItemList.remove(position);
                 notifyDataSetChanged();
+            }
+        });
+        writtenGotoReview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, ReviewActivity.class));
             }
         });
         return convertView;

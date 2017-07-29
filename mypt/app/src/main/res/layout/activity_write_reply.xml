@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_write_reply"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.jungjune.mypt.Activity.WriteReplyActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/star_one"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_margin="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/btn_reviewwrite_star_on" />
+
+                <ImageView
+                    android:id="@+id/star_two"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_margin="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/btn_reviewwrite_star_on" />
+
+                <ImageView
+                    android:id="@+id/star_three"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_margin="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/btn_reviewwrite_star_on" />
+
+                <ImageView
+                    android:id="@+id/star_four"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_margin="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/btn_reviewwrite_star_on" />
+
+                <ImageView
+                    android:id="@+id/star_five"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_margin="3dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/btn_reviewwrite_star_off" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1시간 전"
+                    android:textAlignment="textEnd"
+                    android:textColor="#afafaf"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/context"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="이분은 이분이분해서 이분이분하네요 정말.. 최고입니다."
+                android:textAlignment="viewStart"
+                android:textColor="#626262"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#d9d9d9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+            <EditText
+                android:id="@+id/write"
+                android:padding="16dp"
+                android:text="댓글쓰기"
+                android:textStyle="bold"
+                android:textColor="#afafaf"
+                android:textSize="12sp"
+                android:layout_weight="6"
+                android:background="@drawable/round_outline"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:src="@drawable/btn_float_ok"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/floatingActionButton" />
+    </FrameLayout>
+</LinearLayout>
