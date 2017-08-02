@@ -16,9 +16,10 @@ import android.widget.ImageView;
 
 import com.example.jungjune.mypt.Adapter.CenterAdapter;
 import com.example.jungjune.mypt.R;
+import com.example.jungjune.mypt.Util.TextTitleActivity;
 import com.example.jungjune.mypt.Util.TitleBarActivity;
 
-public class CenterActivity extends TitleBarActivity {
+public class CenterActivity extends TextTitleActivity {
     TabLayout tablayout;
     ViewPager pager;
     FloatingActionButton fab;
@@ -45,8 +46,10 @@ public class CenterActivity extends TitleBarActivity {
                 pager.setCurrentItem(tab.getPosition());
                 switch (tablayout.getSelectedTabPosition()) {
                     case 0:
+                        fab.setVisibility(View.VISIBLE);
                         break;
                     case 1:
+                        fab.setVisibility(View.INVISIBLE);
                         break;
                 }
             }

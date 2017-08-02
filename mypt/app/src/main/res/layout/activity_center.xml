@@ -20,6 +20,8 @@
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         app:fabSize="normal"
+        android:background="#039be5"
+        android:src="@drawable/btn_float_ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

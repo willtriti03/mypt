@@ -4,9 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.jungjune.mypt.R;
+import com.example.jungjune.mypt.Util.TextTitleActivity;
 import com.example.jungjune.mypt.Util.TitleBarActivity;
 
-public class    ReviewListActivity extends TitleBarActivity {
+import org.w3c.dom.Text;
+
+public class    ReviewListActivity extends TextTitleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

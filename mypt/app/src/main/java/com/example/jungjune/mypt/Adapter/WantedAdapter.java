@@ -8,9 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.jungjune.mypt.Activity.ChooseThisDialog;
 import com.example.jungjune.mypt.Activity.EventActivity;
 import com.example.jungjune.mypt.Activity.ILikeItActivity;
 import com.example.jungjune.mypt.Item.EventItem;
@@ -68,6 +70,12 @@ public class WantedAdapter extends BaseAdapter {
             Glide.with(context).load(arrayList.get(i+1)).centerCrop().into(img[i]);
         }
         */
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, ChooseThisDialog.class));
+            }
+        });
         Glide.with(context).load(R.drawable.dadasdas).centerCrop().into(profil);
         for(int i = 0; i< 5; ++i ){
             Glide.with(context).load(R.drawable.dasd).centerCrop().into(img[i]);
@@ -76,6 +84,8 @@ public class WantedAdapter extends BaseAdapter {
         name.setText(listViewItem.getName());
         introduce.setText(listViewItem.getIntroduce());
         timeAgo.setText(listViewItem.getTime()+"전");
+
+        LinearLayout touch_panel= convertView.findViewById(R.id.touch_panel);
 
         return convertView;
     }

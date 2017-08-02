@@ -67,6 +67,14 @@ public class TrainerMatchingFragment extends Fragment {
         params.width = dpToPx(120);
         params.height = dpToPx(90);
         params.rightMargin =dpToPx(5);
+
+        Button commit = v.findViewById(R.id.commit);
+        commit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction().replace(R.id.contentPanel, new TrainerMatchingNowFragment()).commit();
+            }
+        });
         return v;
     }
 

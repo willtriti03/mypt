@@ -42,6 +42,9 @@
         <activity android:name=".Activity.SearchActivity"></activity>
         <activity android:name=".Activity.TrainerPTResultActivity"></activity>
         <activity android:name=".Activity.WriteReplyActivity"></activity>
+        <activity android:name=".Activity.SpecActivity"></activity>
+        <activity android:name=".Activity.ChooseThisDialog" android:theme="@android:style/Theme.DeviceDefault.Light.Dialog"></activity>
+
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />

@@ -4,9 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.jungjune.mypt.R;
+import com.example.jungjune.mypt.Util.TextTitleActivity;
 import com.example.jungjune.mypt.Util.TitleBarActivity;
 
-public class TrainerPTResultActivity extends TitleBarActivity {
+public class TrainerPTResultActivity extends TextTitleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

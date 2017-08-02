@@ -400,6 +400,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
                 android:layout_weight="0.7"
                 android:background="@drawable/round_ractangle_skyblue"
                 android:text="이 내용으로 매칭하기"

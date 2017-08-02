@@ -20,7 +20,7 @@ import java.util.ArrayList;
  * Created by jungjune on 2017-07-23.
  */
 
-public class TrainerMatchingNowFragment extends Fragment {
+public class    TrainerMatchingNowFragment extends Fragment {
     Context context;
     View view;
     ListView listView;
